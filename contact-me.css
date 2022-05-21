@@ -1,0 +1,18 @@
+.entry {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+  	align-items: stretch;
+}
+
+span {
+	font-size: 30px;
+  	margin: 0 10px;
+}
+
+.key {
+	text-align: right;
+}
+
+.value {
+	text-align: left;
+}

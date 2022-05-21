@@ -1,11 +1,15 @@
 @font-face {
-  font-family: "Rochester";
-  src: url('Rochester-Regular.ttf');
+	font-family: "Rochester";
+	src: url('Rochester-Regular.ttf');
 }
 
 * { 
     margin: 0;
     padding: 0;
+}
+
+body {
+	background-color: black;
 }
 
 img.background {
