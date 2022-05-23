@@ -1,12 +1,11 @@
 .entry {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-  	align-items: stretch;
+  	column-gap: 10px;
 }
 
 span {
 	font-size: 30px;
-  	margin: 0 10px;
 }
 
 .key {
