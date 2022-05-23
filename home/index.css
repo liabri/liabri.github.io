@@ -69,15 +69,21 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: #eeeef1;
 	text-decoration: none;
-    padding: 15px 18px;
+    padding: 0px 18px;
     font-size: 30px;
 	font-family: Lunchbox Slab, serif;
+
+	display: inline-block;
+	text-shadow: 1.5px 1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px -1.5px 0 #cac6c5, -1.5px 1.5px 0 #cac6c5, 1.5px -1.5px 0 #cac6c5;
+	transition: all 400ms ease-in-out;
 }
 
 nav a:hover {
-	color: #e695f4;
+	color: #f89bb4;
+	transform: translate(-5px, -5px);
+	text-shadow: 1.5px 1.5px 0 #eeeef1, -1.5px -1.5px 0 #eeeef1, -1.5px -1.5px 0 #eeeef1, -1.5px 1.5px 0 #eeeef1, 1.5px -1.5px 0 #eeeef1, 5px 5px red;
 }
 
 /* language form */
