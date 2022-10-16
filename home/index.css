@@ -137,6 +137,25 @@ input:checked ~ #lang-form {
 	font-family: Rochester, serif;
 }
 
+#lang-form ul li:hover {
+	background-color: green;
+}
+
+#lang-form p {
+	display: none;
+	position: absolute;
+	right: 5vw;
+	width: 55vw;
+	top: 30vh;
+
+	font-size: 0.5em;
+}
+
+#lang-form ul li:hover p {
+	background-color: green;
+	display: block;
+}
+
 /* back */
 #back {
 	position: absolute;
