@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "Rochester";
-	src: url('Rochester-Regular.ttf');
+	src: url('../data/fonts/Rochester-Regular.ttf');
 }
 
 @font-face {
 	font-family: "Lunchbox Slab";
-	src: url('LunchboxSlab-Light.woff');
+	src: url('../data/fonts/LunchboxSlab-Light.woff');
 }
 
 * { 
