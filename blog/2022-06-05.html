@@ -8,21 +8,37 @@
     <title>Creating an IME for Linux</title>
   </head>
   <body>
+    <div class="sidebar">
+      <a id="back" href="index.html">☚ back</a>
+      <nav class="toc">
+        <ul>
+            <li>
+              <a href="#The Nitty Gritty of Development">The Nitty Gritty of Development</a>
+            </li>
+            <li>
+              <a href="#Benten">Benten</a>
+            </li>
+            <li>
+              <a href="#Ankra">Ankra</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
     <main>
       <div class="header">
         <div>
-          <h1 class="title">Creating an IME for Linux</h1>
+          <h1 id="t" class="title">Creating an IME for Linux</h1>
           <div>
             <span>June 5, 2022</span>
             <span>·</span>
             <div class="tags">
-              <a href="tags#linguistics" class="tag">#linguistics</a>
-              <a href="tags#programming" class="tag">#programming</a>
+                <a href="tags#linguistics" class="tag">#linguistics</a>
+                <a href="tags#programming" class="tag">#programming</a>
             </div>
           </div>
         </div>
-        <hr />
       </div>
+      <hr />
       <p><span class="lettrine">A</span>n <strong>I</strong>nput <strong>M</strong>ethod <strong>E</strong>ditor, a program that enables the input of characters not natively supported on the input devices, typically be using a sequence of characters that <em>are</em> natively available. Languages that utilise NON XXX writing systems such as Mandarin, Japanese, Korean require this to feasible enter characters without having a hundred+ key keyboard. This is how however found for more than just language input, possibly for the input of diacritics, a unicode character (by code) and evening Latin characters sometimes.</p>
 <p>Naturally, wayland being very new and niche, support for such a program is not widespread. Even at the point of this being written, there is no way to introduce a 3rd party window for further character selection (which is considered as standard functionality). It was for this reason that I was motivated to create my own completely from scratch.</p>
 <h2>The Nitty Gritty of Development</h2>
