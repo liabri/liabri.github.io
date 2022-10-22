@@ -8,38 +8,39 @@
     <title>Creating an IME for Linux</title>
   </head>
   <body>
-    <div class="sidebar">
-      <a id="back" href="index.html">☚ back</a>
-      <nav class="toc">
-        <ul>
-            <li>
-              <a href="#The Nitty Gritty of Development">The Nitty Gritty of Development</a>
-            </li>
-            <li>
-              <a href="#Benten">Benten</a>
-            </li>
-            <li>
-              <a href="#Ankra">Ankra</a>
-            </li>
-        </ul>
-      </nav>
-    </div>
-    <main>
-      <div class="header">
-        <div>
-          <h1 id="t" class="title">Creating an IME for Linux</h1>
+    <div id="page">
+      <div class="sidebar">
+        <a id="back" href="index.html">☚ back</a>
+        <nav class="toc">
+          <ul>
+              <li>
+                <a href="#The Nitty Gritty of Development">The Nitty Gritty of Development</a>
+              </li>
+              <li>
+                <a href="#Benten">Benten</a>
+              </li>
+              <li>
+                <a href="#Ankra">Ankra</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+      <main>
+        <div class="header">
           <div>
-            <span>June 5, 2022</span>
-            <span>·</span>
-            <div class="tags">
-                <a href="tag/linguistics.html" class="tag">#linguistics</a>
-                <a href="tag/programming.html" class="tag">#programming</a>
+            <h1 id="t" class="title">Creating an IME for Linux</h1>
+            <div>
+              <span>June 5, 2022</span>
+              <span>·</span>
+              <div class="tags">
+                  <a href="tag/linguistics.html" class="tag">#linguistics</a>
+                  <a href="tag/programming.html" class="tag">#programming</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr />
-      <p><span class="lettrine">A</span>n <strong>I</strong>nput <strong>M</strong>ethod <strong>E</strong>ditor, a program that enables the input of characters not natively supported on the input devices, typically be using a sequence of characters that <em>are</em> natively available. Languages that utilise NON XXX writing systems such as Mandarin, Japanese, Korean require this to feasible enter characters without having a hundred+ key keyboard. This is how however found for more than just language input, possibly for the input of diacritics, a unicode character (by code) and evening Latin characters sometimes.</p>
+        <hr />
+        <p><span class="lettrine">A</span>n <strong>I</strong>nput <strong>M</strong>ethod <strong>E</strong>ditor, a program that enables the input of characters not natively supported on the input devices, typically be using a sequence of characters that <em>are</em> natively available. Languages that utilise NON XXX writing systems such as Mandarin, Japanese, Korean require this to feasible enter characters without having a hundred+ key keyboard. This is how however found for more than just language input, possibly for the input of diacritics, a unicode character (by code) and evening Latin characters sometimes.</p>
 <p>Naturally, wayland being very new and niche, support for such a program is not widespread. Even at the point of this being written, there is no way to introduce a 3rd party window for further character selection (which is considered as standard functionality). It was for this reason that I was motivated to create my own completely from scratch.</p>
 <h2>The Nitty Gritty of Development</h2>
 <p><span class="lettrine">G</span>etting started was not an easy task, first of all I had no idea how input methods worked, and at the conceiving of this project I was still using Xorg, which was actual living hell for IME developers (more on that later). I started off trying to reverse engineer fcitx5, the up &amp; coming standard in the IME world on Linux. Although it is very well organised the fact I am not a C++ developer &amp; the amount of extraness required for Xorg support was <em>extremely</em> confusing. I was not quite sure what I was doing but I luckily stumbled upon the OpenBangla project which was also made in Rust. This allowed me to narrow it down to a simple application that will take an input (i.e. key) and output the desired key after some black magic, i.e. the engine. Not terribly complex and I managed to get a working version quite easily, but now how do I get this to actually take in the keyboards input on the fly? </p>
@@ -65,12 +66,7 @@
 <p><span class="lettrine">A</span>nkra, I suppose a fork of benten exclusively implementing the table method. Frankly, benten may not have been the best of ideas, nor of executions either, it was however a great learning experience. It was my 2nd project in Rust, and realistically my first completed real project.</p>
 <p>Ankra was the project I was admittely losing hope for. I ended up trying <code>RIME</code>s cangjie, which is great but very bloaty and confusing to configure, not to mention all the docs I could find where in Mandarin. What separates RIMEs cangjie to mine is the QoL features that making typing a smooth experience.  such as phrase support, a &quot;smart&quot; dictionary, inputting multiple characters without needing to <em>space bar</em> each one in. </p>
 
-    </main>
-
-<!--     <footer>
-        <div id="rights">
-            All rights reserved. Contact: <a href="mailto:blog@example.com">blog@example.com</a>
-      </div>
-    </footer> -->
+      </main>
+    </div>
   </body>
 </html>

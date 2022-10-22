@@ -3,10 +3,17 @@
 }
 
 
-body {
+#page {
+	color: inherit;
+	background-color: inherit;
 	padding: 3em 20vw 3em 16vw;
 	display: flex;
 	gap: 40px;
+}
+
+#page {
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 #back {
