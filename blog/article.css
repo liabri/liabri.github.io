@@ -2,18 +2,10 @@
 	scroll-behavior: smooth;
 }
 
-
 #page {
-	color: inherit;
-	background-color: inherit;
-	padding: 3em 20vw 3em 16vw;
+	padding: 3em 20vw 3em 4vw;
 	display: flex;
 	gap: 40px;
-}
-
-#page {
-  color: var(--text-color);
-  background-color: var(--bg-color);
 }
 
 #back {
@@ -23,45 +15,45 @@
 	text-align: right;
 }
 
+/* todo: collapse side bar on small screens */
 .sidebar {
 	display: flex;
 	flex-direction: column;
-	/*background-color: red;*/
-	gap: 100px;
+	gap: 5em;
+}
+
+.toc {
+	width: 13em;
+  	/*position: sticky;*/
+  	background-color: transparent;
 }
 
 .toc ul {
 	list-style: none; 
+	padding: 0;
 }
 
-.toc {
-	white-space: nowrap;
-	width: 15em;
-	/*position: fixed;*/
-	/*top: 5rem;*/
-  	/*left: 2rem;	*/
-	padding-left: 0;
-	border-left: 1px solid #ddd;
-  	background-color: rgb(0 0 0 / 0);
-  	background-color: red;
+.toc li {
+	border-left: 2px solid var(--text-color);
+	padding-left: 10px;
+}
+
+.toc li:focus-within {
+	border-left: 2px solid tomato;
 }
 
 .toc a {
 	display: inline-block;
 	text-decoration: none;
-  	line-height: 2rem;
-  	padding: 0 1rem;
-	color: #202020;
+	color: var(--text-color);
 }
 
 .toc a:hover,
 .toc a:focus {
-	color: red;
-	text-decoration: underline;
+	color: tomato;
 }
 
 main {
-	/*background-color: #f6f6f2;*/
 	border-style: solid;
 	border: 1px;
 	border-spacing: 0px;
