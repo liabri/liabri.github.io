@@ -90,6 +90,12 @@
               <li class="toc-level-3">
                 <a href="#électroniques_(class_3)">électroniques (class 3)</a>
               </li>
+              <li class="toc-level-3">
+                <a href="#le_bruit_et_le_silence">Le bruit et le silence</a>
+              </li>
+              <li class="toc-level-3">
+                <a href="#regex">Regex</a>
+              </li>
               <li class="toc-level-4">
                 <a href="#critère">Critère</a>
               </li>
@@ -455,6 +461,45 @@ peuvent contenir des données très volumineuses.</p>
 <li>non conçus pour l'utilisation par les humains, du coup ils sont pour qui ? intégrés à des outils tel que le traitements de texte.
 <em>eg.</em> Glawi : dicitonnaire élwctornique libre du français...</li>
 </ul>
+<h3>Le bruit et le silence</h3>
+<p>Le bruit est la proportion de réponses erronées.
+Le silence est la proprtion de bons résultats que la requête n'a pas trouvé, a manqué.</p>
+<p>Expressions régulières (Regex)</p>
+<h3>Regex</h3>
+<p>anti- — anti.*
+-er  — .<em>ers?
+re- or ré- — (re|ré).</em>
+uer[^tuer&amp;ruer] — .*[^tr]uer
+zoo- — zoo.+</p>
+<p>.*[^aoe]ull?e</p>
+<p>---- .<em>lav.</em> ----
+. 	matches any character</p>
+<ul>
+<li>matches any character 0, 1, or more times until <code>lav</code> (in the same line)
+lav matches <code>lav</code>
+. 	matches any character</li>
+<li>matches any character 0, 1, or more times until after <code>lav</code> (in the same line)
+lavable
+relaver
+délavable</li>
+</ul>
+<p>https://jdhao.github.io/2019/02/28/sublime_text_regex_cheat_sheet/
+Special Characters</p>
+<table><thead><tr><th>expression</th><th>Description</th></tr></thead><tbody>
+<tr><td>.</td><td>Match any character</td></tr>
+<tr><td>^</td><td>Match line begin</td></tr>
+<tr><td>$</td><td>Match line end</td></tr>
+<tr><td>*</td><td>Match previous RE 0 or more times greedily</td></tr>
+<tr><td>*?</td><td>Match previous RE 0 or more times non-greedily</td></tr>
+<tr><td>+</td><td>Match previous RE 1 or more times greedily</td></tr>
+<tr><td>+?</td><td>Match previous RE 1 or more times non-greedily</td></tr>
+<tr><td>?</td><td>Match previous RE 0 or 1 time greedily</td></tr>
+<tr><td>??</td><td>Match previous RE 0 or 1 time non-greedily</td></tr>
+<tr><td>A</td><td>B</td></tr>
+<tr><td>{m}</td><td>Match previous RE exactly m times</td></tr>
+<tr><td>{m,n}</td><td>Match previous RE m to n times greedily</td></tr>
+<tr><td>{m, n}?</td><td>Match previous RE m to n times, non-greedily</td></tr>
+</tbody></table>
 <hr />
 <p>[1] Le Robert en Ligne</p>
 <p>[2] Extraits du dictionnaire de l'Académie Française (9° édition, 1986)</p>
