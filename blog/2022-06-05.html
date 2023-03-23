@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="sakura.css" rel="stylesheet">
     <link href="article.css" rel="stylesheet">
-    <title>Creating an IME for Linux</title>
+    <title>Unreasonable writing systems for Linux</title>
   </head>
   <body>
     <input type="checkbox" class="theme-switch" id="theme-switch">
@@ -30,7 +30,7 @@
       <main>
         <div class="header">
           <div>
-            <h1 id="t" class="title">Creating an IME for Linux</h1>
+            <h1 id="t" class="title">Unreasonable writing systems for Linux</h1>
             <div>
               <span>June 5, 2022</span>
               <span>·</span>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <hr />
-        <p><span class="lettrine">A</span>n <strong>I</strong>nput <strong>M</strong>ethod <strong>E</strong>ditor is a program that enables the input of characters not natively supported on the input devices, typically by using a sequence of characters that <em>are</em> natively available. Languages that utilise NON XXX writing systems such as Mandarin, Japanese, Korean require this to feasibly enter characters without having a keyboard of a hundred, if not a thousand keys. They are however also used for more than just language input, but rather possibly for the input of diacritics, unicode characters (by code) and evening Latin characters sometimes.</p>
+        <p><span class="lettrine">A</span>n <strong>I</strong>nput <strong>M</strong>ethod <strong>E</strong>ditor is a program that enables the input of characters not natively supported on the input devices, typically by using a sequence of characters that <em>are</em> natively available. Languages that utilise writing systems containing an unreasonable amount of characters such as Mandarin, Japanese, Korean require this to feasibly enter characters without having a keyboard of a hundred, if not a thousand keys. They are however also used for more than just language input, but rather possibly for the input of diacritics, unicode characters (by code) and evening Latin characters sometimes.</p>
 <p>    Naturally, wayland being very new and niche, support for such a program is not widespread. Even at the point of this being written, there is no way to introduce a 3rd party window for further character selection (which is considered standard functionality). It was for this reason that I was motivated to create my own completely from scratch.</p><section id="the_nitty_gritty_of_development"></section>
 <h2>The Nitty Gritty of Development</h2>
 <p><span class="lettrine">G</span>etting started was not an easy task, first of all I had no idea how input methods worked, and at the conception of this project I was still using Xorg, which was actual living hell for IME developers (more on that later). I started off trying to reverse engineer fcitx5, the up &amp; coming standard in the IME world on Linux. Although it is very well organised, the fact that I am not a C++ developer &amp; the amount of extraness required for Xorg support, I was <em>extremely</em> confused. I was not quite sure what I was doing but I luckily stumbled upon the OpenBangla project, an IME for the Bengali language, which lo' and behold was also written in Rust. This allowed me to narrow it down to a simple application that will take an input (i.e. key) and output the desired character·s after some black magic, i.e. the engine. Not terribly complex and I managed to get a working version quite easily, but now how do I get this to actually read keyboard input on the fly? </p>
