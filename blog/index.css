@@ -1,5 +1,5 @@
 * {
-	background-image: linear-gradient(to right, rgba(255,255,255, 0.97) 0 100%), url('data/universal/artdeco.svg');
+	background-image: url('data/universal/artdeco.png');
 }
 
 main {

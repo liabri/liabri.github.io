@@ -10,10 +10,18 @@
   <body>
     <input type="checkbox" class="theme-switch" id="theme-switch">
     <div id="page">
+      <div class="header">
+        <span>June 5, 2022</span>
+        <span>·</span>
+        <div class="tags">
+            <a href="tag/linguistics.html" class="tag">#linguistics</a>
+            <a href="tag/programming.html" class="tag">#programming</a>
+        </div>
+      </div>
       <label for="theme-switch" class="switch-label"></label>
       <div class="sidebar">
+        <a id="back" href="index.html">back ☚</a>
         <h1 class="title">Unreasonable writing systems for Linux</h1>
-        <a id="back" href="index.html">☚ back</a>
         <nav class="toc">
           <ul>
               <li class="toc-level-2">
@@ -29,19 +37,6 @@
         </nav>
       </div>
       <main>
-        <div class="header">
-          <div>
-            <div>
-              <span>June 5, 2022</span>
-              <span>·</span>
-              <div class="tags">
-                  <a href="tag/linguistics.html" class="tag">#linguistics</a>
-                  <a href="tag/programming.html" class="tag">#programming</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr />
         <p><span class="lettrine">A</span>n <strong>I</strong>nput <strong>M</strong>ethod <strong>E</strong>ditor is a program that enables the input of characters not natively supported on the input devices, typically by using a sequence of characters that <em>are</em> natively available. Languages that utilise writing systems containing an unreasonable amount of characters such as Mandarin, Japanese, Korean require this to feasibly enter characters without having a keyboard of a hundred, if not a thousand keys. They are however also used for more than just language input, but rather possibly for the input of diacritics, unicode characters (by code) and evening Latin characters sometimes.</p>
 <p>    Naturally, wayland being very new and niche, support for such a program is not widespread. Even at the point of this being written, there is no way to introduce a 3rd party window for further character selection (which is considered standard functionality). It was for this reason that I was motivated to create my own completely from scratch.</p><section id="the_nitty_gritty_of_development"></section>
 <h2>The Nitty Gritty of Development</h2>
