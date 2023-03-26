@@ -11,13 +11,17 @@
 
 /* BACK BUTTON */
 #back {
-/*	padding-top: 1em;*/
-	font-size: 0.7em;
-/*	white-space: nowrap;*/
-/*	text-align: right;*/
-/*background: yellow;*/
-margin-top: -20px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+	display: block;
 }
+
+#back img {
+	width: 15px;
+}
+
 
 main {
 	margin-left: 40px;
@@ -34,6 +38,7 @@ h1 {
 	font-size: 4em;
 	white-space: normal;
 	line-height: 0.75;
+	word-wrap: break-word;
 }
 
 h1:hover {
@@ -42,22 +47,49 @@ h1:hover {
 	transform: translate(-1px, -1px);
 }
 
+h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+
 .header {
 	display: flex;
 	flex-direction: row;
-	gap: 10px;
+}
+
+.header div {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: row;
+	gap: .5em;
 	writing-mode: vertical-rl;
 	transform: rotate(-180deg);
-  	justify-content: flex-end;
+}
+
+.date {
+	font-weight: bold;
+}
+
+.line {
+	margin-right: 15px;
+  	border: 3px solid var(--light-text);
+  	width: 0;
+}
+
+.tags {
+	text-align: center;
+	font-family: MetriaStreet;
+	font-size: 2em;
+	display: flex;
+	flex-direction: column;
 }
 
 /* todo: collapse side bar on small screens */
 .sidebar {
 	display: flex;
 	flex-direction: column;
-/*	gap: 5em;*/
-	min-width: 25vw;
-	max-width: 25vw;
+	gap: 5rem;
+	min-width: 27vw;
+	max-width: 27vw;
 }
 
 .toc {
