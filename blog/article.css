@@ -76,11 +76,17 @@ h2, h3, h4, h5, h6 {
 }
 
 .tags {
-	text-align: center;
 	font-family: MetriaStreet;
 	font-size: 2em;
 	display: flex;
 	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.tags a {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 5px 0 5px;
 }
 
 /* todo: collapse side bar on small screens */

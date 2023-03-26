@@ -205,22 +205,8 @@ hr {
 }
 
 a {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
   text-decoration: none;
   color: var(--light-text);
-}
-
-a:hover, a:focus, a:active {
-  -webkit-transform: scale(1.1) rotate(4deg);
-  transform: scale(1.1) rotate(4deg);
 }
 
 ul {
@@ -421,4 +407,23 @@ ruby rt {
   font-size: 2.5rem;
   text-align: center;
   display: block;
+}
+
+.tags a {
+  --_g1: conic-gradient(from 90deg at 50% 75%,#fff  90deg,#fff 0) no-repeat;
+  --_g2: conic-gradient(from 90deg at 50% 75%,#0000 90deg,#000 0) no-repeat;
+  background: 
+    var(--_g1) 0    calc(134% - var(--_p,0%)),
+    var(--_g2) 0    calc(134% - var(--_p,0%)),
+    var(--_g1) 100% calc(200% - var(--_p,0%)),
+    var(--_g2) 100% calc(200% - var(--_p,0%)),
+    #000;
+  background-size: 50.2% 400%;
+  -webkit-background-clip: text, padding-box;
+          background-clip: text, padding-box;
+  transition: 0.5s
+}
+
+.tags a:hover {
+  --_p: 134%;
 }
