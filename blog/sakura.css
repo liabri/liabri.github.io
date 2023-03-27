@@ -22,13 +22,13 @@ SQUARE BULLET POINTS 		PICOCSS*/
 }
 
 @font-face {
-    font-family: DecoDividers;
-    src: url(../data/fonts/DecoDividers.ttf) format("truetype");
+    font-family: Lettrine;
+    src: url(../data/fonts/EmporiumNF.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: Lettrine;
-    src: url(../data/fonts/EmporiumNF.ttf) format("truetype");
+    font-family: DecoDividers;
+    src: url(../data/fonts/DecoDividers.ttf) format("truetype");
 }
 
 :root {
