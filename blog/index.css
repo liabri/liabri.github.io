@@ -1,14 +1,12 @@
-* {
-	background-image: url('data/universal/artdeco.png');
+#page {
+	padding: 150px 0 200px 0;
+    background: url('data/universal/index_top.png') top no-repeat, url('data/universal/index_bottom.png') bottom left no-repeat, url('data/universal/index_middle.png') repeat-y;
+	background-size: 100%;
 }
 
 main {
   	padding: 13px 0 13px 0;
 	max-width: 50em;
-}
-
-main * {
-	z-index: 1;
 }
 
 article {
