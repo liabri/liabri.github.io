@@ -7,6 +7,11 @@ BLOCK QUOTES 		 		MARKDOWN-SPLENDOR
 SQUARE BULLET POINTS 		PICOCSS*/
 
 @font-face {
+    font-family: Voltaire;
+    src: url(../data/fonts/Voltaire-Regular.ttf) format("truetype");
+}
+
+@font-face {
     font-family: MetriaStreet;
     src: url(../data/fonts/MetriaStreet.otf) format("opentype");
 }
@@ -17,53 +22,13 @@ SQUARE BULLET POINTS 		PICOCSS*/
 }
 
 @font-face {
-    font-family: SpeedLine;
-    src: url(../data/fonts/SpeedLine.ttf) format("truetype");
-}
-
-@font-face {
     font-family: DecoDividers;
     src: url(../data/fonts/DecoDividers.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: GentiumPlus;
-    src: url(../data/fonts/GentiumPlus-Regular.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: GentiumPlus;
-    src: url(../data/fonts/GentiumPlus-Bold.ttf) format("truetype");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: GentiumPlus;
-    src: url(../data/fonts/GentiumPlus-Italic.ttf) format("truetype");
-    font-style: italic;
-}
-
-@font-face {
-    font-family: GentiumPlus;
-    src: url(../data/fonts/GentiumPlus-BoldItalic.ttf) format("truetype");
-    font-style: italic;
-    font-weight: bold;
-}
-
-@font-face {
     font-family: Lettrine;
-    src: url(../data/fonts/EileenCapsBlack.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: SourceCodePro;
-    src: url(../data/fonts/SourceCodePro-VariableFont.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: SourceCodePro;
-    src: url(../data/fonts/SourceCodePro-Italic-VariableFont.ttf) format("truetype");
-    font-style: italic;
+    src: url(../data/fonts/EmporiumNF.ttf) format("truetype");
 }
 
 :root {
@@ -124,7 +89,7 @@ SQUARE BULLET POINTS 		PICOCSS*/
 
 html {
   font-size: 70%;
-  font-family: GentiumPlus;
+  font-family: Voltaire;
 }
 
 body {
@@ -155,7 +120,7 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: SpeedLine;
+  font-family: MetriaStreet;
   line-height: 1.1;
   font-weight: 500;
   margin-top: 3rem;
@@ -167,27 +132,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.35em;
+  font-size: 3.35em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 h3 {
-  font-size: 1.85em;
+  font-size: 2.85em;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 2.25em;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 2em;
 }
 
 p {
@@ -266,7 +231,7 @@ code, kbd, samp {
   padding: 0 0.5em;
   background-color: #f1f1f1;
   white-space: pre-wrap;
-  font-family: SourceCodePro;
+  font-family: monospace;
 }
 
 pre > code {
@@ -390,9 +355,10 @@ ruby rt {
 
 .lettrine {
   float: left;
-  font-size: 8.5rem;
+  font-size: 7rem;
   font-family: Lettrine; 
-  margin-top: 13px;
+  margin-top: 20px;
+  letter-spacing: 0.5rem;
   line-height: 0.7;
 }
 
