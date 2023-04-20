@@ -64,7 +64,7 @@ img#background {
 nav {
 	z-index: 2;
   	position: absolute;
-	top: 80%;
+	top: 69%;
     background-color: transparent;
 }
 
@@ -134,7 +134,7 @@ input:checked ~ #lang-form {
 	font-size: 50px;
 
 	background-color: blue;
-	font-family: Rochester, serif;
+	font-family: serif;
 }
 
 #lang-form ul li:hover {
