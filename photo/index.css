@@ -40,7 +40,7 @@ main {
 #header {
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: 2vh;
     text-align: center;
     margin-top: 3vh;
 }
@@ -52,12 +52,19 @@ main {
     color: inherit;
 }
 
-#header div {
+#header #title {
     display: flex;
     background-color: lightblue;
 }
 
-#title {
+#header #nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    justify-content: center;
+}
+
+#title h1 {
     margin: auto;
     padding: 0 5vw 0 5vw;
     margin-bottom: -4vh;
