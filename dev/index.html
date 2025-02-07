@@ -1,147 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>liabri - software dev</title>
-		<link rel="stylesheet" type="text/css" href="index.css"/>
-		<link rel="stylesheet" type="text/css" href="crt.css"/>
-	</head>
+    <head>
+        <meta charset="utf-8" />
+        <title>liabri - software dev</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link rel="stylesheet" type="text/css" href="crt.css" />
+    </head>
 
-	<body class="crt">
-    	<img id="background" src="data/wp/wallpaper.jpg">
-		<div class="scanline"></div>
-		<div id="header"> 
-	 		<a href="../index.html"><img id="icon" src="../data/icons/icon.svg"/></a>
-	 		<div id="title">
-		    	<pre id="title"> 
-       _                     ______    __                                                   __                    
-      / \                   /      \  |  \                                                 |  \                   
-     / ▓▓  _______  ______ |  ▓▓▓▓▓▓\_| ▓▓_   __   __   __  ______   ______   ______   ____| ▓▓ ______  __     __ 
+    <body class="crt">
+        <img id="background" src="data/wp/wallpaper.jpg" />
+        <div class="scanline"></div>
+        <div id="header">
+            <a href="../index.html"
+                ><img id="icon" src="../data/icons/icon.svg"
+            /></a>
+            <pre>
+       _                     ______    __                                                   __
+      / \                   /      \  |  \                                                 |  \
+     / ▓▓  _______  ______ |  ▓▓▓▓▓▓\_| ▓▓_   __   __   __  ______   ______   ______   ____| ▓▓ ______  __     __
     / ▓▓  /       \/      \| ▓▓_  \▓▓   ▓▓ \ |  \ |  \ |  \|      \ /      \ /      \ /      ▓▓/      \|  \   /  \
    / ▓▓  |  ▓▓▓▓▓▓▓  ▓▓▓▓▓▓\ ▓▓ \    \▓▓▓▓▓▓ | ▓▓ | ▓▓ | ▓▓ \▓▓▓▓▓▓\  ▓▓▓▓▓▓\  ▓▓▓▓▓▓\  ▓▓▓▓▓▓▓  ▓▓▓▓▓▓\\▓▓\ /  ▓▓
-  / ▓▓    \▓▓    \| ▓▓  | ▓▓ ▓▓▓▓▓    | ▓▓ __| ▓▓ | ▓▓ | ▓▓/      ▓▓ ▓▓   \▓▓ ▓▓    ▓▓ ▓▓  | ▓▓ ▓▓    ▓▓ \▓▓\  ▓▓ 
- / ▓▓     _\▓▓▓▓▓▓\ ▓▓__/ ▓▓ ▓▓       | ▓▓|  \ ▓▓_/ ▓▓_/ ▓▓  ▓▓▓▓▓▓▓ ▓▓     | ▓▓▓▓▓▓▓▓ ▓▓__| ▓▓ ▓▓▓▓▓▓▓▓  \▓▓ ▓▓   
-/ ▓▓     |       ▓▓\▓▓    ▓▓ ▓▓        \▓▓  ▓▓\▓▓   ▓▓   ▓▓\▓▓    ▓▓ ▓▓      \▓▓     \\▓▓    ▓▓\▓▓     \   \▓▓▓   
-\▓▓       \▓▓▓▓▓▓▓  \▓▓▓▓▓▓ \▓▓         \▓▓▓▓  \▓▓▓▓▓\▓▓▓▓  \▓▓▓▓▓▓▓\▓▓       \▓▓▓▓▓▓▓ \▓▓▓▓▓▓▓ \▓▓▓▓▓▓▓    \▓    
-
-<pre class="blinker cursor">
+  / ▓▓    \▓▓    \| ▓▓  | ▓▓ ▓▓▓▓▓    | ▓▓ __| ▓▓ | ▓▓ | ▓▓/      ▓▓ ▓▓   \▓▓ ▓▓    ▓▓ ▓▓  | ▓▓ ▓▓    ▓▓ \▓▓\  ▓▓
+ / ▓▓     _\▓▓▓▓▓▓\ ▓▓__/ ▓▓ ▓▓       | ▓▓|  \ ▓▓_/ ▓▓_/ ▓▓  ▓▓▓▓▓▓▓ ▓▓     | ▓▓▓▓▓▓▓▓ ▓▓__| ▓▓ ▓▓▓▓▓▓▓▓  \▓▓ ▓▓
+/ ▓▓     |       ▓▓\▓▓    ▓▓ ▓▓        \▓▓  ▓▓\▓▓   ▓▓   ▓▓\▓▓    ▓▓ ▓▓      \▓▓     \\▓▓    ▓▓\▓▓     \   \▓▓▓
+\▓▓       \▓▓▓▓▓▓▓  \▓▓▓▓▓▓ \▓▓         \▓▓▓▓  \▓▓▓▓▓\▓▓▓▓  \▓▓▓▓▓▓▓\▓▓       \▓▓▓▓▓▓▓ \▓▓▓▓▓▓▓ \▓▓▓▓▓▓▓    \▓
+                <pre class="blinker cursor">
  ___________
 |           \
  \▓▓▓▓▓▓▓▓▓▓▓
+                </pre>
+            </pre>
+        </div>
+        <div id="projects">
+            <div class="project">
+                <h3 class="title">benten</h3>
+                <div class="upper-grid">
+                    <p class="description">
+                        An input method engine specialising in mixed scripts
+                        implemented for Wayland
+                    </p>
+                    <div class="icons">
+                        <a href="https://github.com/liabri/benten"
+                            ><img class="icon" src="data/icons/source_code.svg"
+                        /></a>
+                    </div>
+                </div>
+                <div class="lower-grid">
+                    <div class="tags">
+                        <label>wayland</label>
+                        <label>language</label>
+                        <label>rust</label>
+                    </div>
+                    <label class="readme"><b>$</b> read_more</label>
+                </div>
+            </div>
 
-</pre>
-			</div>
-		</div>
-		<div id="projects"> 
-			<div class="project">
-				<h3 class="title">benten</h3>
-				<div class="upper-grid">
-					<p class="description">An input method engine specialising in mixed scripts implemented for Wayland</p>	
-					<div class="icons">
-						<img class="icon" src="data/icons/external_link.svg"/>
-						<img class="icon" src="data/icons/source_code.svg"/>
-					</div>
-				</div>
-				<div class="lower-grid">
-					<div class="tags">
-						<label>wayland</label>
-						<label>language</label>
-						<label>rust</label>
-					</div>
-					<label class="readme"><b>$</b> read_more</label>
-				</div>
-			</div>
+            <div class="project">
+                <h3 class="title">ankra</h3>
+                <div class="upper-grid">
+                    <p class="description">
+                        A flexible table based input method engine implemented
+                        for Wayland.
+                    </p>
+                    <div class="icons">
+                        <a href="https://github.com/liabri/ankra"
+                            ><img class="icon" src="data/icons/source_code.svg"
+                        /></a>
+                    </div>
+                </div>
+                <div class="lower-grid">
+                    <div class="tags">
+                        <!-- get tags from git repo -->
+                        <label>wayland</label>
+                        <label>chinese</label>
+                        <label>rust</label>
+                    </div>
+                    <label class="readme"><b>$</b> read_more</label>
+                </div>
+            </div>
 
-			<div class="project">
-				<h3 class="title">strofa</h3> <!-- get title from git repo -->
-				<div class="upper-grid">
-					<p class="description">A tui music player for mpd</p>	<!-- get mini-dsc from git repo -->
-					<div class="icons">
-						<img class="icon" src="data/icons/external_link.svg"/>
-						<img class="icon" src="data/icons/source_code.svg"/>
-					</div>
-				</div>
-				<div class="lower-grid">
-					<div class="tags"> <!-- get tags from git repo -->
-						<label>mpd</label>
-						<label>music</label>
-						<label>rust</label>
-						<label>tui</label>
-					</div>
-					<label class="readme"><b>$</b> read_more</label>
-				</div>
-			</div>
+            <div class="project">
+                <h3 class="title">zmerald</h3>
+                <div class="upper-grid">
+                    <p class="description">A flexible configuration language</p>
+                    <div class="icons">
+                        <a href="https://github.com/liabri/zmerald"
+                            ><img class="icon" src="data/icons/source_code.svg"
+                        /></a>
+                    </div>
+                </div>
+                <div class="lower-grid">
+                    <div class="tags">
+                        <!-- get tags from git repo -->
+                        <label>parser</label>
+                        <label>rust</label>
+                        <label>config</label>
+                    </div>
+                    <label class="readme"><b>$</b> read_more</label>
+                </div>
+            </div>
 
-			<div class="project">
-				<h3 class="title">zmerald</h3> <!-- get title from git repo -->
-				<div class="upper-grid">
-					<p class="description">A flexible configuration language</p>	<!-- get mini-dsc from git repo -->
-					<div class="icons">
-						<img class="icon" src="data/icons/external_link.svg"/>
-						<img class="icon" src="data/icons/source_code.svg"/>
-					</div>
-				</div>
-				<div class="lower-grid">
-					<div class="tags"> <!-- get tags from git repo -->
-						<label>parser</label>
-						<label>rust</label>
-						<label>config</label>
-					</div>
-					<label class="readme"><b>$</b> read_more</label>
-				</div>
-			</div>
+            <div class="project">
+                <h3 class="title">rimca</h3>
+                <div class="upper-grid">
+                    <p class="description">
+                        A tui minecraft launcher supporting modded and offline
+                        instances
+                    </p>
+                    <div class="icons">
+                        <a href="https://github.com/liabri/rimca"
+                            ><img class="icon" src="data/icons/source_code.svg"
+                        /></a>
+                    </div>
+                </div>
+                <div class="lower-grid">
+                    <div class="tags">
+                        <label>minecraft</label>
+                        <label>rust</label>
+                    </div>
+                    <label class="readme"><b>$</b> read_more</label>
+                </div>
+            </div>
 
-			<div class="project">
-				<h3 class="title">rimca</h3> <!-- get title from git repo -->
-				<div class="upper-grid">
-					<p class="description">A tui minecraft launcher supporting modded instances</p>	<!-- get mini-dsc from git repo -->
-					<div class="icons">
-						<img class="icon" src="data/icons/external_link.svg"/>
-						<img class="icon" src="data/icons/source_code.svg"/>
-					</div>
-				</div>
-				<div class="lower-grid">
-					<div class="tags"> <!-- get tags from git repo -->
-						<label>minecraft</label>
-						<label>rust</label>
-					</div>
-					<label class="readme"><b>$</b> read_more</label>
-				</div>
-			</div>
+            <div class="project">
+                <h3 class="title">tema</h3>
+                <div class="upper-grid">
+                    <p class="description">
+                        A simple and highly flexible theme manager for *nix
+                        systems
+                    </p>
+                    <div class="icons">
+                        <a href="https://github.com/liabri/tema"
+                            ><img class="icon" src="data/icons/source_code.svg"
+                        /></a>
+                    </div>
+                </div>
+                <div class="lower-grid">
+                    <div class="tags">
+                        <label>theming</label>
+                        <label>rust</label>
+                    </div>
+                    <label class="readme"><b>$</b> read_more</label>
+                </div>
+            </div>
 
-			<div class="project">
-				<h3 class="title">tema</h3> <!-- get title from git repo -->
-				<div class="upper-grid">
-					<p class="description">A simple and highly flexible theme manager for *nix systems</p>	<!-- get mini-dsc from git repo -->
-					<div class="icons">
-						<img class="icon" src="data/icons/external_link.svg"/>
-						<img class="icon" src="data/icons/source_code.svg"/>
-					</div>
-				</div>
-				<div class="lower-grid">
-					<div class="tags"> <!-- get tags from git repo -->
-						<label>theming</label>
-						<label>rust</label>
-					</div>
-					<label class="readme"><b>$</b> read_more</label>
-				</div>
-			</div>
+            <div class="project">6</div>
+        </div>
 
-			<div class="project">6</div>
-		</div>
-
-		<div id="bar">
-			<label id="count">[Viewing 6 projects]</label>
-			<div id="controls">
-				<label><span class="key">^x</span><span>Exit</span></label>
-				<label><span class="key">^g</span><span>Help</span></label>
-				<label><span class="key">s</span><span>Down</span></label>
-				<label><span class="key">w</span><span>Up</span></label>
-				<label><span class="key">l</span><span>Language</span></label>
-				<label><span class="key">h</span><span>Home</span></label>
-				<label><span class="key">r</span><span>Reload</span></label>
-				<label><span class="key">q</span><span>Uhh... (meme theme)</span></label>
-			</div>
-		</div>
-	</body>
+        <div id="bar">
+            <label id="count">[Viewing 6 projects]</label>
+            <div id="controls">
+                <label><span class="key">^x</span><span>Exit</span></label>
+                <label><span class="key">^g</span><span>Help</span></label>
+                <label><span class="key">s</span><span>Down</span></label>
+                <label><span class="key">w</span><span>Up</span></label>
+                <label><span class="key">l</span><span>Language</span></label>
+                <label><span class="key">h</span><span>Home</span></label>
+                <label><span class="key">r</span><span>Reload</span></label>
+                <label
+                    ><span class="key">q</span
+                    ><span>Uhh... (meme theme)</span></label
+                >
+            </div>
+        </div>
+    </body>
 </html>

@@ -1,6 +1,12 @@
-* { 
+@font-face {
+    font-family: "BitEnd";
+    src: url("/home/git/liabri.github.io/dev/data/fonts/bitend-mono.otf");
+}
+
+* {
     margin: 0;
     padding: 0;
+    font-family: BitEnd;
 }
 
 body {
@@ -9,24 +15,24 @@ body {
     align-items: center;
     justify-content: center;
 
-	background-color: #0f0f0f;
-	color: #eeeef1;	
+    background-color: #0f0f0f;
+    color: #eeeef1;
 }
 
 img#background {
-	position: absolute;
-	z-index: -1;
+    position: absolute;
+    z-index: -1;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
 
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 
-	filter: blur(2px);
+    filter: blur(2px);
 }
 
 /* header */
@@ -39,188 +45,193 @@ img#background {
 }
 
 #icon {
-	position: absolute;
-	left: 50px;
+    position: absolute;
+    left: 50px;
 }
-
 
 #title {
-	font-size: 0.7vw;
-	display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 20px; */
+
+    background: blue;
 }
 
-#title .cursor {
-	align-self: flex-end;
+pre {
+    font-family: "Courier New";
+    font-size: 0.7vw;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 5vh;
 }
 
 .blinker {
-	animation: 1.5s blink step-end infinite;
+    animation: 1.5s blink step-end infinite;
 }
 
 @keyframes "blink" {
-	from, to {
-		opacity: 0;
-	}
+    from,
+    to {
+        opacity: 0;
+    }
 
-	50% {
-		opacity: 1;
-	}
+    50% {
+        opacity: 1;
+    }
 }
 
 /* projects */
 #projects {
-	display: grid;
-	gap: 10px 10px;
-	grid-template-columns: 1fr 1fr 1fr;
-	width: 60vw;
-	height: auto;
+    display: grid;
+    gap: 13px 13px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 60vw;
+    height: auto;
 }
 
 .project {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	padding: 20px;
-	min-height: 200px;
-	height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    min-height: 200px;
+    height: auto;
 
-	border-style: solid;
-	border-radius: 5px;
-	border-width: 1px;
-	border-color: #eeeef1;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #eeeef1;
 }
 
 .project .title {
-	display: inline-block;
-	position: absolute;
-	margin-top: -35px;
-	padding-left: 10px;
-	padding-right: 10px;
+    display: inline-block;
+    position: absolute;
+    margin-top: -34px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-	background-color: black;
+    background-color: black;
 
-	font-size: 22px;
-	font-family: monospace;
-	font-weight: lighter;
+    font-size: 22px;
+    font-weight: lighter;
 }
 
 .project .icons {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .project .icon {
-	width: 25px;
-	cursor: pointer;
+    width: 25px;
+    cursor: pointer;
 }
 
 .project .upper-grid {
-	display: flex;
-	gap: 10px;
-	align-self: flex-start;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-self: flex-start;
 }
 
 .project .lower-grid {
-	display: flex;
-	margin-top: auto;
-	margin-bottom: 5px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 5px;
 }
 
 .project .description {
-	font-size: 1.4em;
-	font-family: monospace;
-	margin-right: auto;
+    font-size: 1em;
+    margin-right: auto;
 }
 
 .project .readme {
-	font-size: 1.5em;
-	font-family: monospace;
-	background-color: #1ea814;
-	padding: 10px 3px;
-	white-space: nowrap;
+    font-size: 0.8em;
+    background-color: #1ea814;
+    padding: 10px 3px;
+    white-space: nowrap;
 
-	border-style: solid;
-	border-width: 0 4px 4px 0;
-	border-color: green;
+    border-style: solid;
+    border-width: 0 4px 4px 0;
+    border-color: green;
 
-	cursor: pointer;
+    cursor: pointer;
+}
+
+.project .readme b {
+    font-size: 0.8em;
 }
 
 .project .readme:hover {
-	border-width: 0 6px 6px 0;
+    border-width: 0 6px 6px 0;
 }
 
 .project .tags {
-	margin-right: auto;
+    margin-right: auto;
 }
 
 .project .tags * {
-	font-size: 1.2em;
-	font-family: monospace;
-	color: #b0b0b0;
-	margin: 3px;
-	cursor: pointer;
+    font-size: 1em;
+    color: #b0b0b0;
+    margin: 3px;
+    cursor: pointer;
 }
 
 /* bar */
 #bar {
-	position: absolute;
-	bottom: 0;
-	width: 100vw;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
 
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #bar #count {
-	align-self: center;
+    align-self: center;
 }
 
 #bar #controls {
-	display: flex;
-	flex: 100%;
-	gap: 20px;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    flex: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 #bar label {
-	display: flex;
-	gap: 5px;
-	flex-grow: 1;
+    display: flex;
+    gap: 5px;
+    flex-grow: 1;
 
-	font-family: monospace;
-	font-size: 1.5em;
+    font-size: 1em;
 }
 
 #bar label .key {
-	background-color: #eeeef1;
-	color: black;
-	padding: 0 2px;
+    background-color: #eeeef1;
+    color: black;
+    padding: 0 2px;
 }
 
 /* phone */
 @media (max-width: 1400px) {
-	#projects {
-		grid-template-columns: 1fr 1fr;
-		width: 50vw;
-	}
+    #projects {
+        grid-template-columns: 1fr 1fr;
+        width: 50vw;
+    }
 
-	.project .lower-grid {
-		grid-template-columns: 1fr;
-	}
+    .project .lower-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 1000px) {
-	#projects {
-		grid-template-columns: 1fr;
-	}
+    #projects {
+        grid-template-columns: 1fr;
+    }
 
-	.project .lower-grid {
-		grid-template-columns: 1fr;
-	}
+    .project .lower-grid {
+        grid-template-columns: 1fr;
+    }
 }
