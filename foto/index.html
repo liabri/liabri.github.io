@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link href="index.css" rel="stylesheet" />
+        <link href="jquery/jquery.pagepiling.css" rel="stylesheet" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="jquery/jqeury.pagepiling.min.js"></script>
+        <script src="index.js"></script>
+        <title>liambrincat</title>
+    </head>
+    <body>
+        <nav>
+            <a class="nav" onmouseover="hideProjectsList();">about</a>
+            <a class="nav" id="projects" onmouseover="showProjectsList();">
+                projects
+            </a>
+            <!-- <a href="../index.html"
+                ><img id="portal" src="../data/icons/portal.jpg"
+            /></a> -->
+            <div id="projectslist">
+                <div class="container">
+                    <a href="#turkija" onclick="hideProjectsList();">
+                        <img src="data/turkija/1.jpg" />
+                    </a>
+                    <div class="overlay"><p>turkija</p></div>
+                </div>
+                <div class="container">
+                    <a href="#italja" onclick="hideProjectsList();">
+                        <img src="data/italja/1.jpg" />
+                    </a>
+                    <div class="overlay"><p>italja</p></div>
+                </div>
+                <div class="container">
+                    <a><img src="data/bulg/1.jpg" /></a>
+                    <div class="overlay"><p>kruha</p></div>
+                </div>
+                <div class="container">
+                    <a><img src="data/moda/1.png" /></a>
+                    <div class="overlay"><p>il moda</p></div>
+                </div>
+                <div class="container">
+                    <a href="#polonja" onclick="hideProjectsList();">
+                        <img src="data/polonja/1.jpg"
+                    /></a>
+                    <div class="overlay"><p>polonja</p></div>
+                </div>
+                <div class="container">
+                    <a><img src="data/gheluq snin/1.jpg" /></a>
+                    <div class="overlay"><p>gheluq snin</p></div>
+                </div>
+                <div class="container">
+                    <a><img src="data/malta/1.jpg" /></a>
+                    <div class="overlay"><p>malta</p></div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div id="pagepiling">
+                <!-- Turkey -->
+                <div class="section pp-scrollable">
+                    <div id="cover">
+                        <h1>Turkija</h1>
+                        <img src="data/turkija/cover.jpg" />
+                    </div>
+                    <div class="images">
+                        <div class="image">
+                            <img src="data/turkija/1.jpg" data-modal />
+                            <a class="name">Ġerrej</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/turkija/2.jpg" data-modal />
+                            <a class="name">Dardir il-Ħabs</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/turkija/3.jpg" data-modal />
+                            <a class="name">Student</a>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Pellentesque tristique interdum odio,
+                            imperdiet ultricies mauris. Cras nulla diam,
+                            ultricies ultricies risus vitae, pulvinar auctor
+                            sem. Vestibulum pellentesque magna sed mattis
+                            imperdiet. Etiam sem massa, interdum sit amet
+                            lobortis in, elementum at nisi. Integer nec gravida
+                            arcu. Cras magna lacus, sollicitudin eget tempus at,
+                            malesuada eu leo. Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit. Sed mi felis, congue at
+                            dictum non, pellentesque ac magna. Duis id sagittis
+                            turpis. Vestibulum laoreet lacinia massa, id commodo
+                            arcu interdum ut. In eget libero auctor, auctor diam
+                            id, mollis quam. Duis eget ligula justo.
+                        </p>
+                        <div class="image">
+                            <img src="data/turkija/4.jpg" data-modal />
+                            <a class="name">Ta' Frenċ</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/turkija/5.jpg" data-modal />
+                            <a class="name">Tal-Lvant</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/turkija/6.jpg" data-modal />
+                            <a class="name">Tal-Lokal</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/turkija/7.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Polonja  -->
+                <div id="Polonja" class="section pp-scrollable">
+                    <div id="cover">
+                        <h1>Polonja</h1>
+                        <img src="data/polonja/cover.jpg" />
+                    </div>
+                    <div class="images">
+                        <div class="image">
+                            <img src="data/polonja/1.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/polonja/2.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/polonja/3.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/polonja/4.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/polonja/5.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/polonja/6.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/polonja/7.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/polonja/8.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Italja -->
+                <div id="italja" class="section pp-scrollable">
+                    <div id="cover">
+                        <h1>Italja</h1>
+                        <img src="data/italja/cover.jpg" />
+                    </div>
+                    <div class="images">
+                        <div class="image">
+                            <img src="data/italja/1.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/italja/2.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                        <div class="image">
+                            <img src="data/italja/3.jpg" data-modal />
+                            <a class="name">Tat-Tramuntana</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section pp-scrollable">
+                    <div class="cover">
+                        <a class="title">ABOUT</a>
+                    </div>
+                    <div class="images">
+                        <img
+                            src="/home/liabri/ritratti/fotografija/series/mili vojt/60010012.jpg"
+                        />
+                        <img
+                            src="/home/liabri/ritratti/fotografija/series/mili vojt/60010025.jpg"
+                        />
+                        <img
+                            src="/home/liabri/ritratti/fotografija/series/mili vojt/60020007.jpg"
+                        />
+                        <img
+                            src="/home/liabri/ritratti/fotografija/series/mili vojt/200084310008.jpg"
+                        />
+                    </div>
+                </div>
+
+                <!-- <div id="about" class="section">
+                    <a class="title">WHO AM I?</a>
+                    <p>
+                        Ao Kim Ngân a.k.a. Yatender, Vietnam based photographer,
+                        is a product of her generation and locale – only insofar
+                        as she has lived in it and always dreamed beyond its
+                        borders. Film is the medium and the metaphor used to
+                        traverse a life full of stolen, fleeting moments.
+                        Yatender’s body of work is an unchoreographed, exposed
+                        archive of all that is real and visceral, by turns
+                        coarse, scorched, and softly lit, through the hazy focus
+                        of a mind in flux. (Bio by Ning)
+                    </p>
+                </div> -->
+            </div>
+        </main>
+        <script src="modal.js"></script>
+    </body>
+</html>
