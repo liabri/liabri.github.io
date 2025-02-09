@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#pagepiling").pagepiling({
         menu: "#menu",
-        anchors: ["turkija", "polonja", "italja"],
+        anchors: ["tangledtapestry", "polonja", "italja"],
         sectionsColor: ["#eeeef2", "#0e0e0e", "#eeeef2"],
         loopTop: true,
         loopBottom: true,

@@ -8,8 +8,8 @@
 }
 
 @font-face {
-    font-family: Bungee;
-    src: url("fonts/Bungee-Regular.woff");
+    font-family: FFGoodPro-News;
+    src: url("fonts/FFGoodPro-News.woff2");
 }
 
 @font-face {
@@ -163,18 +163,6 @@ nav #projects:hover ~ #projectslist,
     position: absolute;
 }
 
-#cover h1 {
-    font-family: Beagley;
-    font-size: 18vh;
-    height: 100%;
-    text-align: center;
-    writing-mode: vertical-lr;
-    transform: rotate(-180deg);
-    color: white;
-    position: absolute;
-    margin-left: -4em;
-}
-
 #cover img {
     height: 90vh;
     /* z-index: -1; */
@@ -197,13 +185,6 @@ div.cover {
     padding-left: 5vw;
 }
 
-p.desc {
-    font-family: NewYork;
-    font-size: 3vh;
-    margin-left: 5vw;
-    max-width: 40vw;
-}
-
 /* photographs */
 .images {
     display: flex;
@@ -213,10 +194,12 @@ p.desc {
 }
 
 .images p {
-    font-family: NewYork;
+    font-family: FFGoodPro-News;
+    text-align: justify;
+    text-justify: inter-word;
     font-size: 3vh;
     max-height: 100vh;
-    min-width: 40vw;
+    min-width: 28vw;
     padding: 0 4vw 0 4vw;
 }
 
@@ -265,8 +248,8 @@ p.desc {
 }
 
 a.name {
-    font-family: NewYork;
-    font-size: 4vh;
-
-    /* background: red; */
+    font-family: FFGoodPro-News;
+    font-style: italic;
+    padding-top: 5px;
+    font-size: 1em;
 }
