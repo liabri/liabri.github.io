@@ -17,3 +17,10 @@ function showProjectsList() {
     document.getElementById("projectslist").style.opacity = 1;
     document.getElementById("projectslist").style.visibility = "visible";
 }
+
+$(container).css({
+    height: "100vh",
+    overflow: "hidden",
+    "-ms-touch-action": "none",
+    "touch-action": "none",
+});
