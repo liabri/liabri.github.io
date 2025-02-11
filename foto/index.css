@@ -271,6 +271,39 @@ a.name {
     font-size: 1em;
 }
 
+/* about */
+#about {
+    width: 95vw;
+    height: 100vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 0 10vw 0 10vw;
+}
+
+#about h1 {
+}
+
+#about img {
+    width: 40vw;
+    height: 70vh;
+}
+
+#about div {
+    display: flex;
+    flex-direction: column;
+}
+
+#about p {
+    font-family: FFGoodPro-News;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 3vh;
+}
+
 /* responsiveness */
 
 @media (max-aspect-ratio: 9/8) {
