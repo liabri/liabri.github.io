@@ -26,13 +26,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: -50px;
     align-items: center;
-    border-right: 2px;
-
-    border-style: solid;
-    border-width: 0px 1px 0px 1px;
-    border-color: #b5c8b7;
     background: white;
 }
 
@@ -40,11 +34,29 @@ nav .nav {
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     font-family: Beagley;
-    font-size: 4em;
+    font-size: 60px;
     color: black;
     text-decoration: none;
-    margin-bottom: 4vh;
     cursor: pointer;
+    margin-bottom: 5vh;
+}
+
+@media (max-aspect-ratio: 20/29) {
+    nav {
+        height: 5vh;
+        width: 100vw;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    nav .nav {
+        margin-bottom: 0;
+        font-size: 3em;
+        writing-mode: inherit;
+        transform: inherit;
+        margin-left: 5vh;
+    }
 }
 
 #portal {
@@ -164,8 +176,11 @@ nav #projects:hover ~ #projectslist,
 }
 
 #cover img {
-    height: 90vh;
-    /* z-index: -1; */
+    height: auto;
+    width: auto;
+    margin-left: 5vw;
+    max-width: 90vw;
+    max-height: 90vh;
 }
 
 div.section {
@@ -193,19 +208,20 @@ div.cover {
     margin-left: 100vw;
 }
 
-.images p {
+.text {
     font-family: FFGoodPro-News;
     text-align: justify;
     text-justify: inter-word;
     font-size: 3vh;
-    max-height: 100vh;
-    min-width: 28vw;
+
+    max-height: 75vh;
+    min-width: 35vw;
+    max-width: 80vw;
     padding: 0 4vw 0 4vw;
 }
 
 .image {
     padding: 0 5vw 0 5vw;
-    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -218,7 +234,8 @@ div.cover {
 }
 
 .image img {
-    height: 80vh;
+    max-height: 80vh;
+    max-width: 90vw;
 }
 
 .image img[data-modal] {
@@ -252,4 +269,18 @@ a.name {
     font-style: italic;
     padding-top: 5px;
     font-size: 1em;
+}
+
+/* responsiveness */
+
+@media (max-aspect-ratio: 9/8) {
+    #cover img {
+        transform: rotate(90deg);
+        max-width: 90vh;
+        max-height: 90vw;
+    }
+
+    .images p {
+        width: max-content;
+    }
 }
