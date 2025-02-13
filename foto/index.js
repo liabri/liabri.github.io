@@ -1,5 +1,17 @@
 let rafId;
 
+// var mouseDetected = true;
+// function onMouseMove(e) {
+//     unlisten("mousemove", onMouseMove, false);
+//     mouseDetected = true;
+// }
+
+// listen("mousemove", onMouseMove, false);
+
+if (window.matchMedia("(pointer: none)").matches) {
+    mouseDetected = false;
+}
+
 $(document).ready(function () {
     $("#pagepiling").pagepiling({
         menu: "#projectslist",
@@ -12,12 +24,32 @@ $(document).ready(function () {
         animateAnchor: false,
 
         afterLoad: function (anchorLink, index) {
-            horizontalScrolling(index);
+            if (!window.matchMedia("(pointer: none)").matches)
+                horizontalScrolling(index);
         },
     });
 
-    $("#pagepiling").pagepiling.setMouseWheelScrolling();
+    if (!window.matchMedia("(pointer: none)").matches)
+        $("#pagepiling").pagepiling.setMouseWheelScrolling();
 });
+
+// function use
+
+// function isTouchDevice() {
+//     return (
+//         "ontouchstart" in window ||
+//         navigator.maxTouchPoints > 0 ||
+//         navigator.msMaxTouchPoints > 0
+//     );
+// }
+
+// function isPortrait() {
+//     if (window.innerHeight > window.innerWidth) {
+//         return true;
+//     }
+
+//     return false;
+// }
 
 function hideProjectsList() {
     document.getElementById("projectslist").style.opacity = 0;
@@ -57,7 +89,6 @@ function horizontalScrolling(index) {
     function draw() {
         cancelAnimationFrame(rafId);
 
-        console.log("G");
         offsetX += speedX;
         const maxScrollLeft =
             scrollContainer.scrollWidth - scrollContainer.clientWidth;
