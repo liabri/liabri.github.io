@@ -1,7 +1,7 @@
 let rafId;
 
 var mouseDetected = false;
-if (matchMedia("(pointer:fine)").matches) mouseDetected = false;
+if (matchMedia("(pointer:fine)").matches) mouseDetected = true;
 
 window.addEventListener("load", function () {
     // jump to section based on anchor on page load
@@ -23,6 +23,7 @@ $(document).ready(function () {
         keyboardScrolling: true,
         sectionSelector: ".section",
         animateAnchor: false,
+        touchSensitivity: 20,
 
         afterLoad: function (anchorLink, index) {
             if (mouseDetected) horizontalScrolling(index);
