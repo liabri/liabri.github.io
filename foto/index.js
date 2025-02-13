@@ -1,12 +1,7 @@
 let rafId;
 
-// var mouseDetected = true;
-// function onMouseMove(e) {
-//     unlisten("mousemove", onMouseMove, false);
-//     mouseDetected = true;
-// }
-
-// listen("mousemove", onMouseMove, false);
+var mouseDetected = false;
+if (matchMedia("(pointer:fine)").matches) mouseDetected = false;
 
 window.addEventListener("load", function () {
     // jump to section based on anchor on page load
@@ -15,7 +10,7 @@ window.addEventListener("load", function () {
     window.location.hash = hash;
 
     // enable horizontal scrolling for first section
-    // if (!window.matchMedia("(pointer: none)").matches) horizontalScrolling(1);
+    if (mouseDetected) horizontalScrolling(1);
 });
 
 $(document).ready(function () {
@@ -29,14 +24,12 @@ $(document).ready(function () {
         sectionSelector: ".section",
         animateAnchor: false,
 
-        // afterLoad: function (anchorLink, index) {
-        //     if (!window.matchMedia("(pointer: none)").matches)
-        //         horizontalScrolling(index);
-        // },
+        afterLoad: function (anchorLink, index) {
+            if (mouseDetected) horizontalScrolling(index);
+        },
     });
 
-    // if (!window.matchMedia("(pointer: none)").matches)
-    // $("#pagepiling").pagepiling.setMouseWheelScrolling();
+    if (mouseDetected) $("#pagepiling").pagepiling.setMouseWheelScrolling();
 });
 
 function hideProjectsList() {
