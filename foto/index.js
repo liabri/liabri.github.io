@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
     window.location.hash = hash;
 
     // enable horizontal scrolling for first section
-    if (!window.matchMedia("(pointer: none)").matches) horizontalScrolling(1);
+    // if (!window.matchMedia("(pointer: none)").matches) horizontalScrolling(1);
 });
 
 $(document).ready(function () {
@@ -29,14 +29,14 @@ $(document).ready(function () {
         sectionSelector: ".section",
         animateAnchor: false,
 
-        afterLoad: function (anchorLink, index) {
-            if (!window.matchMedia("(pointer: none)").matches)
-                horizontalScrolling(index);
-        },
+        // afterLoad: function (anchorLink, index) {
+        //     if (!window.matchMedia("(pointer: none)").matches)
+        //         horizontalScrolling(index);
+        // },
     });
 
-    if (!window.matchMedia("(pointer: none)").matches)
-        $("#pagepiling").pagepiling.setMouseWheelScrolling();
+    // if (!window.matchMedia("(pointer: none)").matches)
+    // $("#pagepiling").pagepiling.setMouseWheelScrolling();
 });
 
 function hideProjectsList() {
