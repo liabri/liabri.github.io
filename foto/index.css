@@ -28,6 +28,24 @@ main {
     top: 0;
 }
 
+#buttons {
+    position: absolute;
+    display: none;
+    right: 2vw;
+    height: 95vh;
+    flex-direction: column;
+    gap: 90vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    background: transparent;
+    z-index: 999;
+}
+
+#buttons img {
+    width: 20px;
+    background: red;
+}
+
 nav {
     height: 100vh;
     width: 5vw;
@@ -45,29 +63,38 @@ nav .nav {
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     font-family: Beagley;
-    font-size: 60px;
+    font-size: 4.5vw;
     color: black;
     text-decoration: none;
     cursor: pointer;
     margin-bottom: 5vh;
 }
 
-#buttons {
-    position: absolute;
-    right: 2vw;
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    gap: 90vh;
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
-    background: transparent;
-    z-index: 999;
-}
+@media (max-aspect-ratio: 20/29) {
+    nav {
+        height: 5vh;
+        min-width: 100vw;
+        margin: 0;
+        padding: 0;
+        gap: 5vw;
 
-#buttons img {
-    width: 20px;
-    background: red;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav .nav {
+        margin: 0;
+        font-size: 5vh;
+        writing-mode: inherit;
+        transform: inherit;
+    }
+
+    nav #projectslist {
+        height: 95vh;
+        top: 5vh;
+        left: 0vw;
+        width: 100vw;
+    }
 }
 
 nav #projects:hover ~ #projectslist,
@@ -145,31 +172,6 @@ nav #projects:hover ~ #projectslist,
     /* Medium desktop: 4 tiles */
     #projectslist li {
         width: 25%;
-    }
-}
-
-@media (max-aspect-ratio: 20/29) {
-    nav {
-        height: 5vh;
-        width: 100vw;
-        flex-direction: row;
-        justify-content: flex-start;
-        padding: 0;
-    }
-
-    nav .nav {
-        margin-bottom: 0;
-        font-size: 3em;
-        writing-mode: inherit;
-        transform: inherit;
-        margin-left: 5vh;
-    }
-
-    nav #projectslist {
-        height: 95vh;
-        top: 5vh;
-        left: 0vw;
-        width: 100vw;
     }
 }
 
@@ -293,7 +295,6 @@ a.name {
 }
 
 #about img {
-    width: 40vw;
     height: 70vh;
 }
 
@@ -309,9 +310,31 @@ a.name {
     font-size: 3vh;
 }
 
+@media (max-aspect-ratio: 13/8) {
+    #about {
+        flex-direction: column;
+        margin: 0;
+        padding-top: 20vh;
+        width: 100vw;
+    }
+
+    #about img {
+        max-width: 80vw;
+        height: 70vh;
+    }
+}
+
 /* responsiveness */
 
 @media (max-aspect-ratio: 9/8) {
+    nav {
+        width: 5vh;
+    }
+
+    nav .nav {
+        font-size: 5vh;
+    }
+
     #cover img {
         transform: rotate(90deg);
         max-width: 90vh;

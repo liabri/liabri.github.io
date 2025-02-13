@@ -9,8 +9,12 @@ window.addEventListener("load", function () {
     window.location.hash = "";
     window.location.hash = hash;
 
-    // enable horizontal scrolling for first section
-    if (mouseDetected) horizontalScrolling(1);
+    if (mouseDetected) {
+        // enable horizontal scrolling for first section
+        horizontalScrolling(1);
+        //  enable buttons to change section
+        document.getElementById("buttons").style.display = "flex";
+    }
 });
 
 $(document).ready(function () {
@@ -23,7 +27,7 @@ $(document).ready(function () {
         keyboardScrolling: true,
         sectionSelector: ".section",
         animateAnchor: false,
-        touchSensitivity: 20,
+        touchSensitivity: 12,
 
         afterLoad: function (anchorLink, index) {
             if (mouseDetected) horizontalScrolling(index);
