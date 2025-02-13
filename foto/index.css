@@ -20,6 +20,14 @@
     src: url("fonts/Beagley/Beagley.otf");
 }
 
+main {
+    position: relative;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    top: 0;
+}
+
 nav {
     height: 100vh;
     width: 5vw;
@@ -117,25 +125,25 @@ nav #projects:hover ~ #projectslist,
 
 @media only screen and (max-width: 480px) {
     /* Smartphone view: 1 tile */
-    #projectslist a {
+    #projectslist li {
         width: 100%;
     }
 }
 @media only screen and (max-width: 650px) and (min-width: 481px) {
     /* Tablet view: 2 tiles */
-    #projectslist a {
+    #projectslist li {
         width: 50%;
     }
 }
 @media only screen and (max-width: 1050px) and (min-width: 651px) {
     /* Small desktop / ipad view: 3 tiles */
-    #projectslist a {
+    #projectslist li {
         width: 33.3%;
     }
 }
 @media only screen and (max-width: 1290px) and (min-width: 1051px) {
     /* Medium desktop: 4 tiles */
-    #projectslist a {
+    #projectslist li {
         width: 25%;
     }
 }
@@ -313,4 +321,8 @@ a.name {
     .images p {
         width: max-content;
     }
+}
+
+body {
+    background: red;
 }

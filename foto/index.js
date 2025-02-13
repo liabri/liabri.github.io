@@ -8,9 +8,15 @@ let rafId;
 
 // listen("mousemove", onMouseMove, false);
 
-if (window.matchMedia("(pointer: none)").matches) {
-    mouseDetected = false;
-}
+window.addEventListener("load", function () {
+    // jump to section based on anchor on page load
+    hash = location.hash;
+    window.location.hash = "";
+    window.location.hash = hash;
+
+    // enable horizontal scrolling for first section
+    if (!window.matchMedia("(pointer: none)").matches) horizontalScrolling(1);
+});
 
 $(document).ready(function () {
     $("#pagepiling").pagepiling({
@@ -33,24 +39,6 @@ $(document).ready(function () {
         $("#pagepiling").pagepiling.setMouseWheelScrolling();
 });
 
-// function use
-
-// function isTouchDevice() {
-//     return (
-//         "ontouchstart" in window ||
-//         navigator.maxTouchPoints > 0 ||
-//         navigator.msMaxTouchPoints > 0
-//     );
-// }
-
-// function isPortrait() {
-//     if (window.innerHeight > window.innerWidth) {
-//         return true;
-//     }
-
-//     return false;
-// }
-
 function hideProjectsList() {
     document.getElementById("projectslist").style.opacity = 0;
     document.getElementById("projectslist").style.visibility = "hidden";
@@ -60,16 +48,6 @@ function showProjectsList() {
     document.getElementById("projectslist").style.opacity = 1;
     document.getElementById("projectslist").style.visibility = "visible";
 }
-
-window.addEventListener("load", function () {
-    // jump to section based on anchor on page load
-    hash = location.hash;
-    window.location.hash = "";
-    window.location.hash = hash;
-
-    // enable horizontal scrolling for first section
-    horizontalScrolling(1);
-});
 
 function horizontalScrolling(index) {
     const sections = document.querySelectorAll(".section");
