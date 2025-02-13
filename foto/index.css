@@ -5,6 +5,9 @@
 * {
     -ms-overflow-style: none; /* hide scroll bar for IE and Edge */
     scrollbar-width: none; /* hide scroll bar for Firefox */
+    /* scroll-behavior-duration: 5000ms;
+    scroll-behavior-delay: 0ms;
+    scroll-behavior: smooth; */
 }
 
 @font-face {
@@ -39,6 +42,24 @@ nav .nav {
     text-decoration: none;
     cursor: pointer;
     margin-bottom: 5vh;
+}
+
+#buttons {
+    position: absolute;
+    right: 2vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    gap: 90vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    background: transparent;
+    z-index: 999;
+}
+
+#buttons img {
+    width: 20px;
+    background: red;
 }
 
 nav #projects:hover ~ #projectslist,
@@ -163,9 +184,8 @@ nav #projects:hover ~ #projectslist,
     max-height: 90vh;
 }
 
-div.section {
+.section {
     height: 100vh;
-    overflow: scroll;
     display: flex;
     align-items: center;
 
@@ -173,7 +193,7 @@ div.section {
     background: white;
 }
 
-div.cover {
+.cover {
     position: absolute;
     width: 100vw;
     height: 100vh;

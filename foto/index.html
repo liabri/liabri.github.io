@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>liambrincat</title>
 
         <link href="jquery/jquery.pagepiling.css" rel="stylesheet" />
         <link href="index.css" rel="stylesheet" />
@@ -10,9 +11,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="jquery/jqeury.pagepiling.min.js"></script>
         <script src="index.js"></script>
-        <title>liambrincat</title>
     </head>
     <body>
+        <div id="buttons">
+            <img
+                src="../data/icons/portal.jpg"
+                onclick="$.fn.pagepiling.moveSectionUp();"
+            />
+            <img
+                src="../data/icons/portal.jpg"
+                onclick="$.fn.pagepiling.moveSectionDown();"
+            />
+        </div>
         <nav>
             <a class="nav" href="#about" onmouseover="hideProjectsList();"
                 >about</a
@@ -270,6 +280,7 @@
                 </div>
             </div>
         </main>
+        <script src="horizontal-scroll.js"></script>
         <script src="modal.js"></script>
     </body>
 </html>

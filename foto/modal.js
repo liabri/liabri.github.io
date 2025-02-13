@@ -1,5 +1,4 @@
 document.querySelectorAll("img[data-modal]").forEach((img) => {
-    console.log("grergre");
     var content = document.createElement("div"); //background
     content.className = "modal-content";
     content.appendChild(new Image()).src = img.src; //modal image
