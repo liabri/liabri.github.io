@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#pagepiling").pagepiling({
-        menu: "#menu",
+        menu: "#projectslist",
         anchors: ["tangledtapestry", "polonja", "italja", "about"],
         sectionsColor: ["#eeeef2", "#0e0e0e", "#eeeef2"],
         loopTop: true,

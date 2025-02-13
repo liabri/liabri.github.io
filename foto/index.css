@@ -50,6 +50,8 @@ nav #projects:hover ~ #projectslist,
     visibility: hidden;
     height: 100vh;
     left: 5vw;
+    padding: 0;
+    margin: 0;
     width: 95vw;
     position: absolute;
     background: #090909;
@@ -59,26 +61,37 @@ nav #projects:hover ~ #projectslist,
     overflow: auto;
 }
 
-#projectslist a {
+#projectslist li {
+    width: 20%;
     float: left;
     position: relative;
-    width: 20%;
+}
+
+#projectslist li.active {
+    a img {
+        filter: grayscale(0);
+    }
 }
 
 #projectslist a img {
     width: 100%;
     filter: grayscale(100%);
-    /* blur(0.5px); */
     display: block;
 }
 
 #projectslist:hover img {
     filter: grayscale(100%);
-    /* blur(0.5px); */
 }
 
 #projectslist img:hover {
-    filter: grayscale(0) blur(0);
+    filter: grayscale(0);
+}
+
+#projectslist li:has(~ li:not(active):hover),
+#projectslist li:not(active):hover ~ li {
+    a img {
+        filter: grayscale(100%);
+    }
 }
 
 @media only screen and (max-width: 480px) {
