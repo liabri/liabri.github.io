@@ -37,34 +37,25 @@ $(document).ready(function () {
     if (mouseDetected) $("#pagepiling").pagepiling.setMouseWheelScrolling();
 });
 
-function openAbout() {
-    document.getElementById("about").style.opacity = 1;
-    document.getElementById("about").style.visibility = "visible";
-    document.getElementById("aboutnav").style.backgroundColor = "#34856c";
+function show($this, about) {
+    $this.classList.add("active");
+    if (about) {
+        document.getElementById("about").classList.add("active");
+    } else {
+        document.getElementById("projectslist").classList.add("active");
+    }
+
     document.getElementById("pp-nav").style.opacity = 0;
     document.getElementById("pp-nav").style.visibility = "hidden";
-    document.getElementById("about").style.left = 0;
 }
 
-function hideAbout() {
-    document.getElementById("about").style.opacity = 0;
-    document.getElementById("about").style.visibility = "hidden";
-    document.getElementById("aboutnav").style.backgroundColor = "transparent";
+function hide(self) {
+    self.classList.remove("active");
+    document.getElementById("about").classList.remove("active");
+    document.getElementById("projectslist").classList.remove("active");
+
     document.getElementById("pp-nav").style.opacity = 1;
     document.getElementById("pp-nav").style.visibility = "visible";
-    document.getElementById("about").style.left = "-100vw";
-}
-
-function hideProjectsList() {
-    document.getElementById("projectslist").style.opacity = 0;
-    document.getElementById("projectslist").style.visibility = "hidden";
-    document.getElementById("projects").style.backgroundColor = "transparent";
-}
-
-function showProjectsList() {
-    document.getElementById("projectslist").style.opacity = 1;
-    document.getElementById("projectslist").style.visibility = "visible";
-    document.getElementById("projects").style.backgroundColor = "#34856c";
 }
 
 function horizontalScrolling(index) {

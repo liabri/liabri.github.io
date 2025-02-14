@@ -14,27 +14,27 @@
     </head>
     <body>
         <div id="buttons">
-            <a onclick="$.fn.pagepiling.moveSectionUp();hideAbout();">prev</a>
-            <a onclick="$.fn.pagepiling.moveSectionDown();hideAbout();">next</a>
+            <a onclick="$.fn.pagepiling.moveSectionUp();">prev</a>
+            <a onclick="$.fn.pagepiling.moveSectionDown();">next</a>
         </div>
         <nav>
-            <a
+            <!-- <a
                 class="nav"
                 style="opacity: 0"
                 onmouseover="hideProjectsList();hideAbout();"
                 >                       </a
-            >
+            > -->
             <a
                 id="aboutnav"
                 class="nav"
-                onmouseover="hideProjectsList();openAbout();"
+                onmouseover="hide(this);show(this, true);"
             >
                 about
             </a>
             <a
                 class="nav"
                 id="projects"
-                onmouseover="showProjectsList();hideAbout();"
+                onmouseover="hide(this);show(this, false);"
             >
                 projects
             </a>
@@ -74,12 +74,15 @@
                         in ways that feel almost inevitable.
                     </p>
                 </div>
+                <div id="closeAbout" onmouseover="hide(this);">
+                    <img src="data/icons/back.svg" />
+                </div>
             </div>
 
             <!-- project selection -->
             <ul id="projectslist">
                 <li data-menuanchor="tangledtapestry" class="active">
-                    <a href="#tangledtapestry" onclick="hideProjectsList();">
+                    <a href="#tangledtapestry" onclick="hide();">
                         <img
                             src="data/tangledtapestry/coverlist.webp"
                             alt="Cover image of Tangled Tapestry photography series"
@@ -87,7 +90,7 @@
                     </a>
                 </li>
                 <li data-menuanchor="echoes-of-the-road">
-                    <a href="#echoes-of-the-road" onclick="hideProjectsList();">
+                    <a href="#echoes-of-the-road" onclick="hide();">
                         <img
                             src="data/echoes-of-the-road/coverlist.webp"
                             alt="Cover image of Tangled Tapestry photography series"
