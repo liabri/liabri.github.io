@@ -13,20 +13,19 @@ window.addEventListener("load", function () {
         // enable horizontal scrolling for first section
         horizontalScrolling(1);
         //  enable buttons to change section
-        document.getElementById("buttons").style.display = "flex";
+        document.getElementById("right").style.display = "flex";
     }
 });
 
 $(document).ready(function () {
     $("#pagepiling").pagepiling({
-        menu: "#projectslist",
-        anchors: ["tangledtapestry", "echoes-of-the-road", "about"],
-        sectionsColor: ["#eeeef2", "#eeeef2", "#eeeef2"],
+        menu: "#projects",
+        anchors: ["tangledtapestry", "echoes-of-the-road"],
+        sectionsColor: ["#eeeef2", "#eeeef2"],
         loopTop: true,
         loopBottom: true,
         keyboardScrolling: true,
         sectionSelector: ".section",
-        animateAnchor: false,
         touchSensitivity: 12,
 
         afterLoad: function (anchorLink, index) {
@@ -38,12 +37,11 @@ $(document).ready(function () {
 });
 
 function show(self, about) {
-    self.classList.add("active");
-    console.log("THIS:" + self);
+    // self.classList.add("active");
     if (about) {
         document.getElementById("about").classList.add("active");
     } else {
-        document.getElementById("projectslist").classList.add("active");
+        document.getElementById("projects").classList.add("active");
     }
 
     document.getElementById("pp-nav").style.opacity = 0;
@@ -51,11 +49,11 @@ function show(self, about) {
 }
 
 function hide() {
-    document.querySelectorAll("nav").forEach((el) => {
-        el.classList.remove("active");
-    });
+    // document.querySelectorAll("nav").forEach((el) => {
+    //     el.classList.remove("active");
+    // });
     document.getElementById("about").classList.remove("active");
-    document.getElementById("projectslist").classList.remove("active");
+    document.getElementById("projects").classList.remove("active");
 
     document.getElementById("pp-nav").style.opacity = 1;
     document.getElementById("pp-nav").style.visibility = "visible";
