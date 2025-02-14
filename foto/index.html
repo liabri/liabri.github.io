@@ -28,8 +28,9 @@
                 id="aboutnav"
                 class="nav"
                 onmouseover="hideProjectsList();openAbout();"
-                >about</a
             >
+                about
+            </a>
             <a
                 class="nav"
                 id="projects"
@@ -40,6 +41,42 @@
             <!-- <a href="../index.html"
                 ><img id="portal" src="../data/icons/portal.jpg"
             /></a> -->
+
+            <!-- about me -->
+            <div id="about">
+                <img src="data/portrait.jpeg" />
+                <div>
+                    <p>
+                        Liam Brincat is a 23-year-old photographer from Malta,
+                        drawn to the quiet stories hidden in everyday life.
+                        Growing up on a small island, he developed a natural
+                        curiosity about the world beyond, but also a deep
+                        appreciation for atmosphere, color, and movement,
+                        capturing fleeting moments that often go unnoticed.
+                        Guided by light—how it shifts, softens, and shapes a
+                        scene—he creates images that feel both intimate and
+                        distant, leaving space for the viewer’s own
+                        interpretation.
+                    </p>
+                    <p>
+                        Film is the medium which transforms light into something
+                        tangible, a physical imprint of a passing moment holding
+                        the scene within its very structure, preserving not just
+                        what was seen, but how it was seen. It resists
+                        immediacy, demanding patience, trust, and an acceptance
+                        of imperfection. Without the ability to review each
+                        shot, film encourages a more thoughtful way of seeing—a
+                        slower, more deliberate engagement with the world. Its
+                        rich textures, subtle shifts in tone, and occasional
+                        unpredictability allow space for both intention and
+                        chance. In embracing film, the unknown—letting light is
+                        also embraced, time, and process shape the final image
+                        in ways that feel almost inevitable.
+                    </p>
+                </div>
+            </div>
+
+            <!-- project selection -->
             <ul id="projectslist">
                 <li data-menuanchor="tangledtapestry" class="active">
                     <a href="#tangledtapestry" onclick="hideProjectsList();">
@@ -63,7 +100,7 @@
             <div id="pagepiling">
                 <!-- Tangled Tapestry -->
                 <div class="section pp-scrollable">
-                    <div id="cover">
+                    <div class="cover">
                         <img
                             src="data/tangledtapestry/cover.webp"
                             alt="Cover image of Tangled Tapestry photography series"
@@ -83,21 +120,21 @@
                             existence is not merely observed but lived,
                             perceived, and embodied.
                         </p>
-                        <div class="image">
+                        <figure class="image">
                             <img
                                 src="data/tangledtapestry/1.webp"
                                 alt="An alleyway with an unfolding colourful composition"
                                 data-modal
                             />
-                            <a class="name">Framed in Passing</a>
-                        </div>
+                            <figcaption>Framed in Passing</figcaption>
+                        </figure>
                         <div class="image">
                             <img
                                 src="data/tangledtapestry/2.webp"
                                 alt="A busy pedestrianised street at dusk"
                                 data-modal
                             />
-                            <a class="name">Between Departures</a>
+                            <figcaption>Between Departures</figcaption>
                         </div>
                         <p class="text">
                             There is no staging, no intervention, only immersion
@@ -119,7 +156,7 @@
                                 alt="A woman shopping at the busy local market"
                                 data-modal
                             />
-                            <a class="name">The Weight of Light</a>
+                            <figcaption>The Weight of Light</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -127,7 +164,7 @@
                                 alt="A man crossing the street holding a mattress"
                                 data-modal
                             />
-                            <a class="name">Resting Place</a>
+                            <figcaption>Resting Place</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -135,7 +172,7 @@
                                 alt="Two woman walking away from a church"
                                 data-modal
                             />
-                            <a class="name">Steps through time</a>
+                            <figcaption>Steps through time</figcaption>
                         </div>
                         <p class="text">
                             Rather than seeking grand narratives, this series
@@ -152,7 +189,7 @@
                                 alt="Two men conversing under an archway with a building in the background"
                                 data-modal
                             />
-                            <a class="name">A Pause in the Current</a>
+                            <figcaption>A Pause in the Current</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -160,7 +197,7 @@
                                 alt="Two kids running in the street playing tag"
                                 data-modal
                             />
-                            <a class="name">And Then They Kept Running</a>
+                            <figcaption>And Then They Kept Running</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -168,14 +205,14 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                     </div>
                 </div>
 
                 <!-- Echoes of the Road -->
                 <div class="section pp-scrollable">
-                    <div id="cover">
+                    <div class="cover">
                         <img
                             src="data/echoes-of-the-road/cover.webp"
                             alt="Cover image of 'echoes-of-the-road' photography series"
@@ -204,7 +241,7 @@
                                 alt="An alleyway with an unfolding colourful composition"
                                 data-modal
                             />
-                            <a class="name">Framed in Passing</a>
+                            <figcaption>Framed in Passing</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -212,7 +249,7 @@
                                 alt="A busy pedestrianised street at dusk"
                                 data-modal
                             />
-                            <a class="name">Between Departures</a>
+                            <figcaption>Between Departures</figcaption>
                         </div>
                         <p class="text">
                             The roads, stations, and passageways exist in a kind
@@ -234,7 +271,7 @@
                                 alt="A woman shopping at the busy local market"
                                 data-modal
                             />
-                            <a class="name">The Weight of Light</a>
+                            <figcaption>The Weight of Light</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -242,7 +279,7 @@
                                 alt="A man crossing the street holding a mattress"
                                 data-modal
                             />
-                            <a class="name">Resting Place</a>
+                            <figcaption>Resting Place</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -250,7 +287,7 @@
                                 alt="Two woman walking away from a church"
                                 data-modal
                             />
-                            <a class="name">Steps through time</a>
+                            <figcaption>Steps through time</figcaption>
                         </div>
                         <p class="text">
                             This stillness invites reflection on movement
@@ -270,7 +307,7 @@
                                 alt="Two men conversing under an archway with a building in the background"
                                 data-modal
                             />
-                            <a class="name">A Pause in the Current</a>
+                            <figcaption>A Pause in the Current</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -278,7 +315,7 @@
                                 alt="Two kids running in the street playing tag"
                                 data-modal
                             />
-                            <a class="name">And Then They Kept Running</a>
+                            <figcaption>And Then They Kept Running</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -286,7 +323,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <p class="text">
                             In their isolation, these images also speak to a
@@ -307,7 +344,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -315,7 +352,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -323,7 +360,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -331,7 +368,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -339,7 +376,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -347,7 +384,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -355,7 +392,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <p class="text">
                             Ultimately, Echoes of the Road is not just about
@@ -372,7 +409,7 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
                         <div class="image">
                             <img
@@ -380,42 +417,8 @@
                                 alt="A woman presumbly walking home with a grocery bag"
                                 data-modal
                             />
-                            <a class="name">Woven Through the City</a>
+                            <figcaption>Woven Through the City</figcaption>
                         </div>
-                    </div>
-                </div>
-                <!-- About -->
-                <div id="about">
-                    <img src="data/portrait.jpeg" />
-                    <div>
-                        <p>
-                            Liam Brincat is a 23-year-old photographer from
-                            Malta, drawn to the quiet stories hidden in everyday
-                            life. Growing up on a small island, he developed a
-                            natural curiosity about the world beyond, but also a
-                            deep appreciation for atmosphere, color, and
-                            movement, capturing fleeting moments that often go
-                            unnoticed. Guided by light—how it shifts, softens,
-                            and shapes a scene—he creates images that feel both
-                            intimate and distant, leaving space for the viewer’s
-                            own interpretation.
-                        </p>
-                        <p>
-                            Film is the medium which transforms light into
-                            something tangible, a physical imprint of a passing
-                            moment holding the scene within its very structure,
-                            preserving not just what was seen, but how it was
-                            seen. It resists immediacy, demanding patience,
-                            trust, and an acceptance of imperfection. Without
-                            the ability to review each shot, film encourages a
-                            more thoughtful way of seeing—a slower, more
-                            deliberate engagement with the world. Its rich
-                            textures, subtle shifts in tone, and occasional
-                            unpredictability allow space for both intention and
-                            chance. In embracing film, the unknown—letting light
-                            is also embraced, time, and process shape the final
-                            image in ways that feel almost inevitable.
-                        </p>
                     </div>
                 </div>
             </div>

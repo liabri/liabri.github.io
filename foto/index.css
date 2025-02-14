@@ -28,6 +28,7 @@ main {
     top: 0;
 }
 
+/* next/prev buttons */
 #buttons {
     position: absolute;
     display: none;
@@ -50,12 +51,14 @@ main {
     font-size: 3vw;
     padding: 3vh 0 3vh 0;
     margin: 5vh 0 5vh 0;
+    transition: 0.4s ease-in-out;
 }
 
 #buttons a:hover {
     background: #34856c;
 }
 
+/* navigation */
 nav {
     height: 100vh;
     width: 5vw;
@@ -118,6 +121,7 @@ nav #projects:hover ~ #projectslist {
     }
 }
 
+/* project selection list */
 nav #projects:hover ~ #projectslist,
 #projectslist:hover {
     visibility: visible;
@@ -196,9 +200,61 @@ nav #projects:hover ~ #projectslist,
     }
 }
 
-/* series */
+/* about */
+#about {
+    position: absolute;
+    z-index: 5;
 
-#cover {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 5vh;
+
+    width: 75vw;
+    height: 100vh;
+
+    margin-left: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    background: #eeeef2;
+    overflow: auto;
+
+    opacity: 0;
+    visibility: hidden;
+
+    left: -100vw;
+    transition-duration: 0.3s;
+}
+
+#about img {
+    max-width: 80vw;
+    height: 70vh;
+}
+
+#about div {
+    display: flex;
+    flex-direction: column;
+}
+
+#about p {
+    font-family: FFGoodPro-News;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 3vh;
+}
+
+@media (max-aspect-ratio: 13/8) {
+    #about {
+        flex-direction: column;
+        padding-top: 10vh;
+        height: 90vh;
+    }
+}
+
+/* series */
+.cover {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -207,7 +263,7 @@ nav #projects:hover ~ #projectslist,
     position: absolute;
 }
 
-#cover img {
+.cover img {
     height: auto;
     width: auto;
     margin-left: 5vw;
@@ -222,13 +278,6 @@ nav #projects:hover ~ #projectslist,
 
     min-height: 100%;
     background: white;
-}
-
-.cover {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    padding-left: 5vw;
 }
 
 /* photographs */
@@ -269,6 +318,14 @@ nav #projects:hover ~ #projectslist,
     max-width: 90vw;
 }
 
+.image figcaption {
+    font-family: FFGoodPro-News;
+    font-style: italic;
+    padding-top: 5px;
+    font-size: 1em;
+}
+
+/* modal */
 .image img[data-modal] {
     cursor: zoom-in;
 }
@@ -293,63 +350,6 @@ nav #projects:hover ~ #projectslist,
     height: auto;
     min-height: 90vh;
     max-height: 90vh;
-}
-
-a.name {
-    font-family: FFGoodPro-News;
-    font-style: italic;
-    padding-top: 5px;
-    font-size: 1em;
-}
-
-/* about */
-#about {
-    position: absolute;
-    z-index: 5;
-
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    gap: 5vh;
-
-    width: 75vw;
-    height: 100vh;
-
-    margin-left: 5vw;
-    padding-left: 10vw;
-    padding-right: 10vw;
-
-    background: #eeeef2;
-    overflow: auto;
-
-    opacity: 0;
-    visibility: hidden;
-}
-
-#about img {
-    max-width: 80vw;
-    height: 70vh;
-}
-
-#about div {
-    display: flex;
-    flex-direction: column;
-}
-
-#about p {
-    font-family: FFGoodPro-News;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 3vh;
-}
-
-@media (max-aspect-ratio: 13/8) {
-    #about {
-        flex-direction: column;
-        padding-top: 10vh;
-        height: 90vh;
-    }
 }
 
 /* responsiveness */
