@@ -99,7 +99,6 @@ nav #projects:hover ~ #projectslist {
 }
 
 /* project selection list */
-nav #projects:hover ~ #projectslist,
 #projectslist:hover {
     visibility: visible;
 }

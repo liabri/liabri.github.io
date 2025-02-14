@@ -37,8 +37,9 @@ $(document).ready(function () {
     if (mouseDetected) $("#pagepiling").pagepiling.setMouseWheelScrolling();
 });
 
-function show($this, about) {
-    $this.classList.add("active");
+function show(self, about) {
+    self.classList.add("active");
+    console.log("THIS:" + self);
     if (about) {
         document.getElementById("about").classList.add("active");
     } else {
@@ -49,8 +50,10 @@ function show($this, about) {
     document.getElementById("pp-nav").style.visibility = "hidden";
 }
 
-function hide(self) {
-    self.classList.remove("active");
+function hide() {
+    document.querySelectorAll("nav").forEach((el) => {
+        el.classList.remove("active");
+    });
     document.getElementById("about").classList.remove("active");
     document.getElementById("projectslist").classList.remove("active");
 

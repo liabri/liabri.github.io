@@ -18,24 +18,8 @@
             <a onclick="$.fn.pagepiling.moveSectionDown();">next</a>
         </div>
         <nav>
-            <!-- <a
-                class="nav"
-                style="opacity: 0"
-                onmouseover="hideProjectsList();hideAbout();"
-                >                       </a
-            > -->
-            <a
-                id="aboutnav"
-                class="nav"
-                onmouseover="hide(this);show(this, true);"
-            >
-                about
-            </a>
-            <a
-                class="nav"
-                id="projects"
-                onmouseover="hide(this);show(this, false);"
-            >
+            <a class="nav" onmouseover="hide();show(this, true);"> about </a>
+            <a class="nav" onmouseover="hide();show(this, false);">
                 projects
             </a>
             <!-- <a href="../index.html"
@@ -74,7 +58,7 @@
                         in ways that feel almost inevitable.
                     </p>
                 </div>
-                <div id="closeAbout" onmouseover="hide(this);">
+                <div id="closeAbout" onmouseover="hide();">
                     <img src="data/icons/back.svg" />
                 </div>
             </div>
