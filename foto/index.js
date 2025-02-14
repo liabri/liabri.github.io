@@ -20,8 +20,8 @@ window.addEventListener("load", function () {
 $(document).ready(function () {
     $("#pagepiling").pagepiling({
         menu: "#projectslist",
-        anchors: ["tangledtapestry", "polonja", "italja", "about"],
-        sectionsColor: ["#eeeef2", "#0e0e0e", "#eeeef2"],
+        anchors: ["tangledtapestry", "echoes-of-the-road", "about"],
+        sectionsColor: ["#eeeef2", "#eeeef2", "#eeeef2"],
         loopTop: true,
         loopBottom: true,
         keyboardScrolling: true,
