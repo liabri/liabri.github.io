@@ -3,6 +3,9 @@ let rafId;
 var mouseDetected = false;
 if (matchMedia("(pointer:fine)").matches) mouseDetected = true;
 
+var aboutOpen = false;
+var projectsOpen = false;
+
 window.addEventListener("load", function () {
     // jump to section based on anchor on page load
     hash = location.hash;
@@ -36,6 +39,16 @@ $(document).ready(function () {
 
     if (mouseDetected) $("#pagepiling").pagepiling.setMouseWheelScrolling();
 });
+
+function openAbout() {
+    document.getElementById("about").style.opacity = 1;
+    document.getElementById("about").style.visibility = "visible";
+}
+
+function hideAbout() {
+    document.getElementById("about").style.opacity = 0;
+    document.getElementById("about").style.visibility = "hidden";
+}
 
 function hideProjectsList() {
     document.getElementById("projectslist").style.opacity = 0;

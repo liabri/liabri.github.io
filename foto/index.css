@@ -32,18 +32,28 @@ main {
     position: absolute;
     display: none;
     right: 2vw;
-    height: 95vh;
+    background: red;
+    height: 100vh;
     flex-direction: column;
-    gap: 90vh;
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
     background: transparent;
     z-index: 999;
+    cursor: pointer;
+    pointer-events: none;
+    justify-content: space-between;
 }
 
-#buttons img {
-    width: 20px;
-    background: red;
+#buttons a {
+    font-family: Beagley;
+    pointer-events: auto;
+    writing-mode: vertical-lr;
+    /* transform: rotate(-180deg); */
+    font-size: 3vw;
+    padding: 3vh 0 3vh 0;
+    margin: 5vh 0 5vh 0;
+}
+
+#buttons a:hover {
+    background: #34856c;
 }
 
 nav {
@@ -67,7 +77,18 @@ nav .nav {
     color: black;
     text-decoration: none;
     cursor: pointer;
-    margin-bottom: 5vh;
+    transition: 0.4s ease-in-out;
+
+    padding-bottom: 5vh;
+    padding-top: 5vh;
+}
+
+nav .nav:hover {
+    background: #34856c;
+}
+
+nav #projects:hover ~ #projectslist {
+    opacity: 1;
 }
 
 @media (max-aspect-ratio: 20/29) {
@@ -283,18 +304,31 @@ a.name {
 
 /* about */
 #about {
-    width: 95vw;
-    height: 100vh;
-    margin-left: 5vw;
+    position: absolute;
+    z-index: 5;
+
     display: flex;
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    gap: 5vw;
-    padding: 0 10vw 0 10vw;
+    gap: 5vh;
+
+    width: 75vw;
+    height: 100vh;
+
+    margin-left: 5vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    background: #eeeef2;
+    overflow: auto;
+
+    opacity: 0;
+    visibility: hidden;
 }
 
 #about img {
+    max-width: 80vw;
     height: 70vh;
 }
 
@@ -313,14 +347,8 @@ a.name {
 @media (max-aspect-ratio: 13/8) {
     #about {
         flex-direction: column;
-        margin: 0;
-        padding-top: 20vh;
-        width: 100vw;
-    }
-
-    #about img {
-        max-width: 80vw;
-        height: 70vh;
+        padding-top: 10vh;
+        height: 90vh;
     }
 }
 
