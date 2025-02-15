@@ -219,26 +219,32 @@ nav ul li:hover {
     width: 50px;
 }
 
-/* @media (max-aspect-ratio: 20/29) {
+@media (max-aspect-ratio: 20/29) {
     nav {
-        height: 5vh;
+        height: 7vh;
         min-width: 100vw;
         margin: 0;
         padding: 0;
         gap: 5vw;
 
+        transform: inherit;
+        background: red;;
         flex-direction: row;
         justify-content: center;
     }
 
-    nav .nav {
+    nav > #right {
+        visibility: hidden;
+    }
+
+    nav > #left {
         margin: 0;
         font-size: 5vh;
         writing-mode: inherit;
         transform: inherit;
     }
 
-    nav #projects {
+    /* nav #projects {
         height: 95vh;
         top: 5vh;
         left: 0vw;
@@ -255,9 +261,9 @@ nav ul li:hover {
 
     #about.active {
         top: 0;
-    }
+    } */
 }
-
+/*
 @media (max-aspect-ratio: 13/8) {
     #about {
         flex-direction: column;
@@ -279,7 +285,7 @@ nav ul li:hover {
 .cover img {
     height: auto;
     width: auto;
-    max-width: 90vw;
+    max-width: 85vw;
     max-height: 90vh;
 }
 
@@ -366,7 +372,7 @@ nav ul li:hover {
 
 /* responsiveness */
 
-/* @media (max-aspect-ratio: 9/8) {
+@media (max-aspect-ratio: 9/8) {
     nav {
         width: 5vh;
     }
@@ -378,10 +384,10 @@ nav ul li:hover {
     .cover img {
         transform: rotate(90deg);
         max-width: 90vh;
-        max-height: 90vw;
+        max-height: 83vw;
     }
 
     .images .text {
         width: max-content;
     }
-} */
+}
