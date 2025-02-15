@@ -29,7 +29,7 @@ main {
 nav {
     height: 100vh;
     width: 100vw;
-    z-index: 999;
+    z-index: 3;
     position: absolute;
     padding: 0;
     margin: 0;
@@ -61,20 +61,22 @@ nav ul {
 nav ul li {
     cursor: pointer;
     pointer-events: auto;
-    padding: 1.5vh;
+    padding: 3vh 1.5vh 3vh 1.5vh;
 }
 
 nav ul li:hover {
     background: #34856c;
 }
 
+/* about + projects */
 #left {
+    z-index: 4;
     font-size: 4.5vw;
     transform: rotate(-180deg);
     background: white;
 }
 
-/* next/prev buttons */
+/* next + prev buttons */
 #right {
     font-size: 3vw;
     justify-content: space-between;
@@ -88,7 +90,7 @@ nav ul li:hover {
     width: 93vw;
     height: 100vh;
     left: -100vw;
-    transition-duration: 0.1s;
+    transition-duration: 0.3s;
 }
 
 #projects.active {
@@ -161,57 +163,33 @@ nav ul li:hover {
     }
 }
 
-.close {
-    background: rgba(230, 230, 230, 1);
-    width: 5vw;
-    display: flex;
-    height:100vh;
-    justify-content: center;
-    pointer-events: auto;
-}
-
-.close img {
-    width: 50px;
-}
-
 /* about */
 #about {
     position: absolute;
-
     display: flex;
     flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    gap: 5vh;
-
-    pointer-events: auto;
 
     width: 93vw;
     height: 100vh;
+    left: -100vw;
 
     background: #eeeef2;
-
-    overflow: auto;
-
-    /* opacity: 0; */
+    pointer-events: auto;
     visibility: hidden;
-
-    left: -100vw;
-    right: 0;
-    transition-duration: 0.1s;
+    transition-duration: 0.3s;
 }
 
 #about img {
     max-width: 80vw;
     height: 70vh;
-    padding-left: 10vw;
 }
 
-#about div {
+#about > div:not(.close) {
     display: flex;
-    flex-direction: column;
-    width: auto;
-    padding-right:10vw;
+    flex-direction: row;
+    gap: 5vh;
+    padding: 0 5vw 0 5vw;
+    align-items: center;
 }
 
 #about p {
@@ -224,6 +202,21 @@ nav ul li:hover {
 #about.active {
     left: 7vw;
     visibility: visible;
+}
+
+/* close section for about and projects */
+.close {
+    background: rgba(230, 230, 230, 1);
+    min-width: 5vw;
+    display: flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.close img {
+    width: 50px;
 }
 
 /* @media (max-aspect-ratio: 20/29) {
