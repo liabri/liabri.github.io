@@ -70,6 +70,22 @@ nav ul li:hover {
 }
 
 /* about + projects */
+
+/* close section for about and projects */
+.close {
+    background: rgba(230, 230, 230, 1);
+    min-width: 5vw;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.close img {
+    width: 50px;
+}
+
 #left {
     z-index: 4;
     font-size: 4.5vw;
@@ -153,6 +169,15 @@ nav ul li:hover {
     }
 }
 
+#projects > .close {
+    background: rgba(30, 30, 30, 1);
+}
+
+#projects .close img {
+    color: white;
+    filter: invert(0.7);
+}
+
 @media only screen and (max-width: 480px) {
     #projects ul li {
         width: 100%;
@@ -213,21 +238,6 @@ nav ul li:hover {
 #about.active {
     left: 7vw;
     visibility: visible;
-}
-
-/* close section for about and projects */
-.close {
-    background: rgba(230, 230, 230, 1);
-    min-width: 5vw;
-    min-height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: auto;
-}
-
-.close img {
-    width: 50px;
 }
 
 /* series */
