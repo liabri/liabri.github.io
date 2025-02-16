@@ -98,6 +98,15 @@ nav ul li:hover {
     padding: 3vh 0 3vh 0;
 }
 
+#left span {
+    position: absolute;
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 2vh;
+    padding: auto;
+}
+
 /* next + prev buttons */
 #right {
     font-size: 3vw;
@@ -209,6 +218,8 @@ nav ul li:hover {
     height: 100vh;
     left: -100vw;
 
+    font-family: FFGoodPro-News;
+
     background: #eeeef2;
     pointer-events: auto;
     visibility: hidden;
@@ -217,7 +228,7 @@ nav ul li:hover {
 
 #about img {
     max-width: 80vw;
-    max-height: 70vh;
+    max-height: 80vh;
 }
 
 #about > div:not(.close) {
@@ -229,10 +240,23 @@ nav ul li:hover {
 }
 
 #about p {
-    font-family: FFGoodPro-News;
     text-align: justify;
     text-justify: inter-word;
     font-size: 3vh;
+}
+
+#about div > span {
+    font-size: 10vh;
+    margin: 0;
+}
+
+#about div > p > a {
+    cursor: pointer;
+    color: #34856c;
+}
+
+#about div > p > a:hover {
+    font-weight: 600;
 }
 
 #about.active {
