@@ -87,6 +87,8 @@ nav ul li:hover {
     width: 50px;
 }
 
+/* main nav bar */
+
 #left {
     z-index: 4;
     font-size: 4.5vw;
@@ -100,8 +102,17 @@ nav ul li:hover {
     padding: 3vh 0 3vh 0;
 }
 
-#left span {
-    left: 0.5vw;
+#left > li > div {
+    align-self: flex-start;
+    position: relative;
+    width: 0;
+    height: 0;
+    padding-left: 0.5vw;
+}
+
+#left > li > div > span {
+    min-height: max-content;
+    min-width: max-content;
     position: absolute;
     color: #6d6d6d;
     font-family: 'Courier New', Courier, monospace;
@@ -378,6 +389,15 @@ nav ul li:hover {
         font-size: 5vh;
     }
 
+    #left > li > div {
+        padding: 0;
+    }
+
+    #left > li > div > span {
+        font-size: 1.5vh;
+        /* line-height: -1em; */
+    }
+
     .cover img {
         transform: rotate(90deg);
         max-width: 90vh;
@@ -412,17 +432,25 @@ nav ul li:hover {
 
     nav > #left {
         width: 100vw;
-        height: 7vh;
+        height: 9vh;
         font-size: 5vh;
         writing-mode: inherit;
         transform: inherit;
         justify-content: center;
-        gap: 7vw;
     }
 
-    nav > #left > li {
+    #left > li {
+        justify-content: center;
+        flex-direction: column-reverse;
         width: auto;
-        padding: 0;
+        padding: 0 3.5vw 0 3.5vw;
+        height: 100%;
+    }
+
+    #left > li > div {
+        width: 0;
+        height: 0;
+        bottom: 1vh;
     }
 
     /* about */
@@ -463,6 +491,5 @@ nav ul li:hover {
 
     .close img {
         transform: rotate(90deg);
-        /* max-height: 2vh; */
     }
 }
