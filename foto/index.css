@@ -282,6 +282,7 @@ nav ul li:hover {
 }
 
 .cover img {
+    display: block;
     height: auto;
     width: auto;
     max-width: 85vw;
