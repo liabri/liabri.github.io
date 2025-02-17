@@ -103,7 +103,7 @@ nav ul li:hover {
 #left span {
     left: 0.5vw;
     position: absolute;
-    color: grey;
+    color: #6d6d6d;
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
     font-size: 1.2vw;
