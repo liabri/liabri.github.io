@@ -45,7 +45,7 @@ nav {
 nav ul {
     list-style-type: none;
     writing-mode: vertical-lr;
-    font-family: Beagley;
+    font-family: Beagley, serif;
     color: black;
 
     height: 100vh;
@@ -221,7 +221,7 @@ nav ul li:hover {
     height: 100vh;
     left: -100vw;
 
-    font-family: FFGoodPro-News;
+    font-family: FFGoodPro-News, sans-serif;
 
     background: #eeeef2;
     pointer-events: auto;
@@ -307,7 +307,7 @@ nav ul li:hover {
 }
 
 .text {
-    font-family: FFGoodPro-News;
+    font-family: FFGoodPro-News, sans-serif;
     text-align: justify;
     text-justify: inter-word;
     font-size: 3vh;
@@ -337,7 +337,7 @@ nav ul li:hover {
 }
 
 .image figcaption {
-    font-family: FFGoodPro-News;
+    font-family: FFGoodPro-News, sans-serif;
     font-style: italic;
     padding-top: 5px;
     font-size: 1em;

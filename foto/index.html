@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8" />
 
-        <!-- LONGER TITLE USINGS WORD FOUND THROUGHOUT BODY MORE -->
-        <!-- BETTER H1 (and hide it) -->
-        <!-- MAYBE REDUCE JS FILES?  -->
+        <!-- layout shifts -->
+        <!-- images too large but i disagree? -->
+        <!-- set explicit sizes for image -->
 
-        <title>Liam Brincat's Photography</title>
+        <title>Liam Brincat's Photographic Atelier</title>
         <meta name="description" content="Liam Brincat is a photographer born and raised in Malta. Growing up on an island has instilled a deep curiosity which only a lens can satisfy. Explore his work through this digital exhibitions of sorts.">
         <meta name="keywords" content="photographer, brincat">
         <meta name="author" content="Liam Brincat">
@@ -34,12 +34,12 @@
         <link href="jquery/jquery.pagepiling.css" rel="stylesheet" />
         <link href="index.css" rel="stylesheet" />
 
-        <script src="jquery/jquery.min.js"></script>
-        <script src="jquery/jqeury.pagepiling.min.js"></script>
-        <script src="index.js"></script>
+        <script src="jquery/jquery.min.js" async></script>
+        <script src="jquery/jqeury.pagepiling.min.js" async></script>
+        <script src="index.js" async></script>
     </head>
     <body>
-        <h1 style="position:absolute">Liam Brincat's Photography Atelier</h1>
+        <h1 style="visibility:hidden;position:absolute">Liam Brincat's Photography Atelier</h1>
         <nav>
             <ul id="left">
                 <li onmouseover="hide();show(this, true);"><span>(and contact)</span>about</li>
@@ -56,7 +56,7 @@
                     <div>
                         <h2>Hello!</h2>
                         <p>
-                            I'm Liam Brincat, a photographer born and raised in Malta; a sun-soaked crossroads in the middle of the sea. Growing up here has undoubtedly shaped the way I observe the world, instilling a sense of quiet reflection and a deep curiosity about the unspoken and often overlooked. I am drawn to atmosphere, colour and movement; framing the subtle emotions of a scene from a removed perspective. I seek the unfolding stories of everyday life, the ephermeral interactions and the countless unspoken narratives.
+                            I'm Liam Brincat, a photographer born and raised in Malta; opening up my photographic atelier to the world. Growing up on an island has undoubtedly shaped the way I observe the world, instilling a sense of quiet reflection and a deep curiosity about the unspoken and often overlooked. I am drawn to atmosphere, colour and movement; framing the subtle emotions of a scene from a removed perspective. I seek the unfolding stories of everyday life, the ephermeral interactions and the countless unspoken narratives.
                         </p>
                         <p>
                             Film is my medium of choice, rooted in its imperfections, intentionality and authenticity. Film forces me to slow down and reflect, immersing me in what I'm observing. Film shines because of the authentic connection it maintains with the reality it captures; it evokes a sense of nostalgia and permanence through its subtleties and imperfections. Every shot is a deliberate decision that has to be made quickly, moments flee and instances fade. The process is intimately human, the waiting, the anticipating, and everything in between. This is why I like to shoot it.
@@ -95,7 +95,7 @@
             <div id="pagepiling">
                 <!-- Tangled Tapestry -->
                 <div class="section pp-scrollable">
-                    <h2>Tangled Tapestry</h2>
+                    <h2 style="visibility:hidden">Tangled Tapestry</h2>
                     <div class="cover">
                         <img
                             src="data/tangledtapestry/cover.webp"
@@ -208,7 +208,7 @@
 
                 <!-- Echoes of the Road -->
                 <div class="section pp-scrollable">
-                    <h2>Echoes of the Road</h2>
+                    <h2 style="visibility:hidden">Echoes of the Road</h2>
                     <div class="cover">
                         <img
                             src="data/echoes-of-the-road/cover.webp"

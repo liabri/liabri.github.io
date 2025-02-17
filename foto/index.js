@@ -91,7 +91,7 @@ function horizontalScrolling(index) {
     }
 
     scrollContainer.addEventListener("wheel", (ev) => {
-        ev.preventDefault();
+        // ev.preventDefault();
         var delta = -1 * Math.sign(ev.wheelDelta);
         speedX += delta * deltaMultiplier;
         speedX =
@@ -99,7 +99,7 @@ function horizontalScrolling(index) {
                 ? Math.min(speedX, maxSpeed)
                 : Math.max(speedX, -maxSpeed);
         return false;
-    });
+    }, {passive: true});
 
     draw();
 }
