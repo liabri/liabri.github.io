@@ -61,6 +61,7 @@ nav ul {
 nav ul li {
     display: flex;
     align-items: center;
+    justify-items: center;
     cursor: pointer;
     pointer-events: auto;
 }
@@ -100,11 +101,12 @@ nav ul li:hover {
 }
 
 #left span {
+    left: 0.5vw;
     position: absolute;
     color: grey;
     font-family: 'Courier New', Courier, monospace;
     font-style: italic;
-    font-size: 2vh;
+    font-size: 1.2vw;
     padding: auto;
 }
 
