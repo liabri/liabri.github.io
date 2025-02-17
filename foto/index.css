@@ -253,6 +253,10 @@ nav ul li:hover {
     margin: 0;
 }
 
+#about div > p > span {
+    color: #34856c;
+}
+
 #about div > p > a {
     cursor: pointer;
     color: #34856c;
