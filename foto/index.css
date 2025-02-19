@@ -19,6 +19,7 @@
 
 main {
     position: relative;
+    overflow: auto;
     right: 0;
     left: 0;
     width: 100vw;
@@ -29,7 +30,7 @@ main {
 nav {
     height: 100vh;
     width: 100vw;
-    z-index: 3;
+    z-index: 999;
     position: absolute;
     padding: 0;
     margin: 0;
@@ -88,6 +89,20 @@ nav ul li:hover {
 }
 
 /* main nav bar */
+#logo {
+    pointer-events: none;
+    padding: 0;
+}
+
+#logo img {
+    width: 10vh;
+    rotate: 180deg;
+    /* background: red; */
+}
+
+#logo:hover {
+    background: transparent;
+}
 
 #left {
     z-index: 4;
@@ -327,6 +342,40 @@ nav ul li:hover {
     min-width: 35vw;
     max-width: 80vw;
     padding: 0 4vw 0 4vw;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.text-long {
+    min-width: max-content;
+    max-width: max-content;
+    word-wrap: none;
+    overflow: none;
+}
+
+.text .def {
+    align-self: flex-start;
+    color: #6d6d6d;
+    font-size: 2vh;
+    padding: 1vh 1vw 1vh 1vw;
+    max-width: max-content;
+    word-wrap: none;
+
+    border: solid #000000;
+    border-width: 0 3px;
+    background-repeat: no-repeat;
+    background-size: 4px 3px;
+    background-position: top left, top right, bottom left, bottom right;
+    background-image: linear-gradient(#000000, #000000),
+                      linear-gradient(#000000, #000000),
+                      linear-gradient(#000000, #000000),
+                      linear-gradient(#000000, #000000);
+}
+
+.text .def i {
+    color: #000000;
+    font-size: 2.4vh;
 }
 
 .image {
@@ -492,4 +541,30 @@ nav ul li:hover {
     .close img {
         transform: rotate(90deg);
     }
+}
+
+/* firstroll.html */
+#firstroll {
+    width: max-content;
+    padding: 0;
+    background: blue;
+    height: 100vh;
+    display: flex;
+    margin-left: 7vw;
+    overlay: none;
+}
+
+#firstroll > h2 {
+    background: red;
+    text-align: center;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+    font-family: Beagley;
+    font-size: 20vh;
+}
+
+#firstroll .images {
+    margin-left: 0;
 }

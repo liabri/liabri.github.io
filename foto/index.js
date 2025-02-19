@@ -17,24 +17,26 @@ window.addEventListener("load", function () {
     }
 });
 
-$(document).ready(function () {
-    $("#pagepiling").pagepiling({
-        menu: "#projects",
-        anchors: ["tangledtapestry", "echoes-of-the-road"],
-        sectionsColor: ["#eeeef2", "#eeeef2"],
-        loopTop: true,
-        loopBottom: true,
-        keyboardScrolling: true,
-        sectionSelector: ".section",
-        touchSensitivity: 12,
+if (window.jQuery) {
+    $(document).ready(function () {
+        $("#pagepiling").pagepiling({
+            menu: "#projects",
+            anchors: ["tangledtapestry", "echoes-of-the-road", "djerdap", "glitch"],
+            sectionsColor: ["#eeeef2", "#eeeef2", "#eeeef2", "#eeeef2"],
+            loopTop: true,
+            loopBottom: true,
+            keyboardScrolling: true,
+            sectionSelector: ".section",
+            touchSensitivity: 12,
 
-        afterLoad: function (anchorLink, index) {
-            if (mouseDetected) horizontalScrolling(index);
-        },
+            afterLoad: function (anchorLink, index) {
+                if (mouseDetected) horizontalScrolling(index);
+            },
+        });
+
+        if (mouseDetected) $("#pagepiling").pagepiling.setMouseWheelScrolling();
     });
-
-    if (mouseDetected) $("#pagepiling").pagepiling.setMouseWheelScrolling();
-});
+}
 
 function show(self, about) {
     // self.classList.add("active");
@@ -44,8 +46,10 @@ function show(self, about) {
         document.getElementById("projects").classList.add("active");
     }
 
-    document.getElementById("pp-nav").style.opacity = 0;
-    document.getElementById("pp-nav").style.visibility = "hidden";
+    try {
+        document.getElementById("pp-nav").style.opacity = 0;
+        document.getElementById("pp-nav").style.visibility = "hidden";
+    } catch {}
 }
 
 function hide() {
@@ -55,8 +59,10 @@ function hide() {
     document.getElementById("about").classList.remove("active");
     document.getElementById("projects").classList.remove("active");
 
-    document.getElementById("pp-nav").style.opacity = 1;
-    document.getElementById("pp-nav").style.visibility = "visible";
+    try{
+        document.getElementById("pp-nav").style.opacity = 1;
+        document.getElementById("pp-nav").style.visibility = "visible";
+    } catch {}
 }
 
 function horizontalScrolling(index) {
