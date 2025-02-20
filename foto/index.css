@@ -24,7 +24,6 @@ main {
     left: 0;
     width: 100vw;
     top: 0;
-    padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* navigation */
@@ -450,8 +449,8 @@ nav ul li:hover {
 
     .cover img {
         transform: rotate(90deg);
-        max-width: 85vh;
-        max-height: 85vh;
+        max-width: 80vh;
+        max-height: 95vw;
     }
 
     .images .text {
