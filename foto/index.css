@@ -335,6 +335,7 @@ nav ul li:hover {
     align-items: center;
     justify-content: center;
     margin-left: 100vw;
+    background-color: #eeeef2;
 }
 
 .text {
@@ -581,11 +582,12 @@ nav ul li:hover {
 }
 
 #firstroll > .cover {
+    background-color: #eeeef2;
     diplay: flex;
     gap: 2vw;
-    width: 91vw;
-    margin-left: 7vw;
-    margin-right: 2vw;
+    width: 90vw;
+    padding-left: 8vw;
+    padding-right: 2vw;
     z-index: -1;
 }
 
