@@ -26,6 +26,11 @@ main {
     top: 0;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 /* navigation */
 nav {
     height: 100vh;
@@ -568,26 +573,45 @@ nav ul li:hover {
 
 /* firstroll.html */
 #firstroll {
-    width: max-content;
+    /* width: max-content; */
     padding: 0;
-    background: blue;
     height: 100vh;
     display: flex;
-    margin-left: 7vw;
     overlay: none;
 }
 
-#firstroll > h2 {
-    background: red;
-    text-align: center;
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    align-self: center;
-    font-family: Beagley;
-    font-size: 20vh;
+#firstroll > .cover {
+    diplay: flex;
+    gap: 2vw;
+    width: 91vw;
+    margin-left: 7vw;
+    margin-right: 2vw;
+    z-index: -1;
 }
 
-#firstroll .images {
-    margin-left: 0;
+#firstroll > .cover > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+
+    gap: 5vh;
+    height: 100vh;
+    max-width: 50vw;
+}
+
+#firstroll h2 {
+    font-family: Beagley;
+    font-size: 15vh;
+    text-shadow: 5px 5px #4fd1a8;
+    margin: 0;
+    line-height: 0.5;
+    margin-left: auto;
+
+}
+
+#firstroll > .cover p {
+    font-family: FFGoodPro-News;
+    font-size: 3vh;
+    margin: 0;
 }
