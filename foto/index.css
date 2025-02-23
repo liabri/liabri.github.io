@@ -619,7 +619,6 @@ nav ul li:hover {
 
 #firstroll > .cover > div {
     display: flex;
-    /* background: blue; */
     flex-direction: column;
     justify-content: center;
     text-align: right;
@@ -629,7 +628,7 @@ nav ul li:hover {
     max-width: 50vw;
 }
 
-#firstroll h1 {
+#firstroll > .cover h1 {
     font-family: Beagley;
     font-size: 15vh;
     text-shadow: 5px 5px #4fd1a8;
