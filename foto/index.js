@@ -25,7 +25,9 @@ if (window.jQuery) {
             sectionsColor: ["#eeeef2", "#eeeef2", "#eeeef2", "#eeeef2"],
             loopTop: true,
             loopBottom: true,
-            keyboardScrolling: true,
+            keyboardScrolling: false,
+            verticalCentered: true,
+            navigation: false,
             sectionSelector: ".section",
             touchSensitivity: 12,
 
@@ -34,6 +36,7 @@ if (window.jQuery) {
             },
         });
 
+        $.fn.pagepiling.setAllowScrolling(false);
         if (mouseDetected) $("#pagepiling").pagepiling.setMouseWheelScrolling();
     });
 }
@@ -96,9 +99,11 @@ function horizontalScrolling(index) {
         progressBarPercentage=Math.round((offsetX/maxScrollLeft)*100);
         document.getElementById("progressBar").style.width = progressBarPercentage + "%";
         if (progressBarPercentage>20) {
-            document.getElementById("progressBarTip").style.display = "none";
+            document.getElementById("progressBarTip").style.opacity = 0;
+            document.getElementById("progressBarTip").style.visibility = "hidden";
         } else {
-            document.getElementById("progressBarTip").style.display = "inherit";
+            document.getElementById("progressBarTip").style.opacity = 0.8;
+            document.getElementById("progressBarTip").style.visibility = "visible";
         }
 
         // about 60 times a second
@@ -106,9 +111,26 @@ function horizontalScrolling(index) {
     }
 
     scrollContainer.addEventListener("wheel", (ev) => {
-
         // ev.preventDefault();
         var delta = -1 * Math.sign(ev.wheelDelta);
+        console.log("DELTA:" + delta);
+        speedX += delta * deltaMultiplier;
+        speedX =
+            speedX > 0
+                ? Math.min(speedX, maxSpeed)
+                : Math.max(speedX, -maxSpeed);
+        return false;
+    }, {passive: true});
+
+    document.addEventListener("keydown", (ev) => {
+        // ev.preventDefault();
+        delta = 0;
+        if (ev.code=="ArrowRight" || ev.code=="ArrowDown") {
+            delta = 3;
+        } else if (ev.code=="ArrowLeft" || ev.code=="ArrowUp") {
+            delta = -3;
+        }
+
         speedX += delta * deltaMultiplier;
         speedX =
             speedX > 0

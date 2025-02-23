@@ -19,7 +19,7 @@
 
 html {
     background: black;
-    padding: 20px 20px 0 20px;
+    padding: 1vw 1vw 0 1vw;
 }
 
 main {
@@ -140,7 +140,7 @@ nav ul li:hover {
         -1.5px -1.5px 0 #0e0e0e,
         -1.5px 1.5px 0 #0e0e0e,
         1.5px -1.5px 0 #0e0e0e,
-        5px 5px #4fd1a8;
+        -5px -5px #4fd1a8;
 }
 
 #left li:hover > div span, #left li > div span {
@@ -184,7 +184,7 @@ nav ul li:hover {
     position: absolute;
     display: flex;
     flex-direction: row;
-    width: 90.5vw;
+    width: 91vw;
     height: 100vh;
     left: -100vw;
     transition-duration: 0.3s;
@@ -275,7 +275,7 @@ nav ul li:hover {
     display: flex;
     flex-direction: row;
 
-    width: 90.5vw;
+    width: 91vw;
     height: 100vh;
     left: -100vw;
 
@@ -351,8 +351,6 @@ nav ul li:hover {
     height: 100vh;
     display: flex;
     align-items: center;
-
-    /* min-height: 100%; */
     background: white;
 }
 
@@ -391,6 +389,7 @@ nav ul li:hover {
     color: #6d6d6d;
     font-size: 2vh;
     padding: 1vh 1vw 1vh 1vw;
+    margin-top: 5vh;
     max-width: max-content;
     word-wrap: none;
 
@@ -593,14 +592,31 @@ nav ul li:hover {
         transform: rotate(90deg);
     }
 
-    .cover {
-        height: 93vh;
-        bottom: 0;
+    .section {
+        padding: 0;
+        margin: 0;
+        padding-bottom: 15vh;
+        flex-direction: column;
     }
 
-    .section {
-        height: 93vh;
-        bottom: 0;
+    .cover {
+        flex-direction: column;
+        position: static;
+        min-height: 93vh;
+        display: flex;
+        justify-content: center;
+        margin-top: 7vh;
+    }
+
+    .images {
+        flex-direction: column;
+        margin: 0;
+        gap: 10vh;
+    }
+
+    .image  {
+        border: none;
+        margin: 0;
     }
 }
 
@@ -746,9 +762,13 @@ nav ul li:hover {
 
 .header p {
     position: absolute;
-    top: -0.9vw;
+    top: -0.5vw;
     width: 87vw;
+    font-size: 15px;
     font-family: FFGoodPro-News;
     text-align: center;
     color: #6d6d6d;
+    transition: ease-in 1s;
+    visibility: visible;
+    opacity: 0.8;
 }
