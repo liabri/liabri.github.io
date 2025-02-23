@@ -2,7 +2,7 @@
     display: none; /* hide scroll bar for chrome, safri and opera */
 }
 
-* {
+*. {
     -ms-overflow-style: none; /* hide scroll bar for IE and Edge */
     scrollbar-width: none; /* hide scroll bar for Firefox */
 }
@@ -628,7 +628,7 @@ nav ul li:hover {
     max-width: 50vw;
 }
 
-#firstroll > .cover h1 {
+#firstroll > .cover > div > h1 {
     font-family: Beagley;
     font-size: 15vh;
     text-shadow: 5px 5px #4fd1a8;
@@ -642,6 +642,7 @@ nav ul li:hover {
     font-size: 2.6vh;
     margin: 0;
     line-height: 0.9;
+    max-width: 20vw;
 }
 
 #firstroll > .images {
@@ -659,6 +660,7 @@ nav ul li:hover {
         flex-direction: row;
         max-width: 100vw;
         max-height: max-content;
+        margin-top: 5vh;
     }
 
     #firstroll > .cover > img {
@@ -667,6 +669,7 @@ nav ul li:hover {
         align-self: center;
         max-height: 60vh;
         max-width: 100vw;
+        margin-bottom: 5vh;
     }
 
     #firstroll .cover > div > p {

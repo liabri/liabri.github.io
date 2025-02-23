@@ -21,7 +21,7 @@ if (window.jQuery) {
     $(document).ready(function () {
         $("#pagepiling").pagepiling({
             menu: "#projects",
-            anchors: ["tangledtapestry", "echoes-of-the-road", "djerdap", "glitch"],
+            anchors: ["tangledtapestry", "echoes-of-the-road", "the-people-of-djerdap", "glitch"],
             sectionsColor: ["#eeeef2", "#eeeef2", "#eeeef2", "#eeeef2"],
             loopTop: true,
             loopBottom: true,
