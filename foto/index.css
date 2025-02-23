@@ -51,6 +51,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background: transparent;
+    /* border-right: 2px #000000 solid; */
 }
 
 nav ul {
@@ -95,7 +96,7 @@ nav ul li:hover {
 }
 
 .close img {
-    width: 50px;
+    max-width: 50px;
 }
 
 /* main nav bar */
@@ -175,8 +176,8 @@ nav ul li:hover {
 }
 
 #right > li {
-    margin: 5vh 0 5vh 0;
-    padding: 3vh 1vw 3vh 1vw;
+    rotate: 270deg;
+    margin-top: -0.5vh;
 }
 
 /* project selection list */
@@ -186,13 +187,13 @@ nav ul li:hover {
     flex-direction: row;
     width: 91vw;
     height: 100vh;
-    left: -100vw;
-    transition-duration: 0.3s;
+    left: 7vw;
+    transform: translate(-100vw, 0);
+    transition: transform 0.5s;
 }
 
 #projects.active {
-    visibility: visible;
-    left: 7vw;
+    transform: translate(0 ,0);
 }
 
 #projects ul {
@@ -277,17 +278,20 @@ nav ul li:hover {
 
     width: 91vw;
     height: 100vh;
-    left: -100vw;
+    /* left: -100vw; */
+    left: 7vw;
 
     font-family: FFGoodPro-News, sans-serif;
 
     background: #eeeef2;
     pointer-events: auto;
-    visibility: hidden;
-    transition-duration: 0.3s;
+    transform: translate(-100vw, 0);
+    transition: transform 0.5s;
 }
 
-#about img {
+#about > div:not(.close) > img {
+    width: auto;
+    height: auto;
     max-width: 80vw;
     max-height: 80vh;
 }
@@ -325,8 +329,7 @@ nav ul li:hover {
 }
 
 #about.active {
-    left: 7vw;
-    visibility: visible;
+    transform: none;
 }
 
 /* main */
@@ -372,6 +375,8 @@ nav ul li:hover {
     max-height: 75vh;
     min-width: 35vw;
     max-width: 80vw;
+    height: auto;
+    width: auto;
     padding: 0 4vw 0 4vw;
 
     display: flex;
@@ -459,6 +464,7 @@ nav ul li:hover {
 
 .modal-content img {
     height: auto;
+    width: auto;
     min-height: 90vh;
     max-height: 90vh;
 }
@@ -643,6 +649,8 @@ nav ul li:hover {
 
 #firstroll > .cover > img {
     max-width: 70vw;
+    height: auto;
+    width: auto;
 }
 
 #firstroll > .cover > div {
@@ -653,6 +661,7 @@ nav ul li:hover {
 
     gap: 5vh;
     height: 100vh;
+    width: auto;
     max-width: 50vw;
 }
 
@@ -687,6 +696,7 @@ nav ul li:hover {
     #firstroll > .cover > div {
         flex-direction: row;
         max-width: 100vw;
+        height: auto;
         max-height: max-content;
         margin-top: 5vh;
     }

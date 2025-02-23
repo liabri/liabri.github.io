@@ -47,21 +47,11 @@ function show(self, about) {
     } else {
         document.getElementById("projects").classList.add("active");
     }
-
-    try {
-        document.getElementById("pp-nav").style.opacity = 0;
-        document.getElementById("pp-nav").style.visibility = "hidden";
-    } catch {}
 }
 
 function hide() {
     document.getElementById("about").classList.remove("active");
     document.getElementById("projects").classList.remove("active");
-
-    try{
-        document.getElementById("pp-nav").style.opacity = 1;
-        document.getElementById("pp-nav").style.visibility = "visible";
-    } catch {}
 }
 
 function horizontalScrolling(index) {
@@ -113,7 +103,6 @@ function horizontalScrolling(index) {
     scrollContainer.addEventListener("wheel", (ev) => {
         // ev.preventDefault();
         var delta = -1 * Math.sign(ev.wheelDelta);
-        console.log("DELTA:" + delta);
         speedX += delta * deltaMultiplier;
         speedX =
             speedX > 0
@@ -141,3 +130,17 @@ function horizontalScrolling(index) {
 
     draw();
 }
+
+// Get the current page scroll position
+scrollTop =
+    window.pageYOffset ||
+    document.documentElement.scrollTop;
+scrollLeft =
+    window.pageXOffset ||
+    document.documentElement.scrollLeft,
+
+    // if any scroll is attempted,
+    // set this to the previous value
+    window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
+    };
