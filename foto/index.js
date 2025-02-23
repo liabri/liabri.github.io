@@ -93,11 +93,15 @@ function horizontalScrolling(index) {
         scrollContainer.scrollLeft = offsetX;
         speedX *= friction;
 
+        progressBarPercentage=Math.round((offsetX/maxScrollLeft)*100);
+        document.getElementById("progressBar").style.width = progressBarPercentage + "%";
+
         // about 60 times a second
         rafId = requestAnimationFrame(draw);
     }
 
     scrollContainer.addEventListener("wheel", (ev) => {
+
         // ev.preventDefault();
         var delta = -1 * Math.sign(ev.wheelDelta);
         speedX += delta * deltaMultiplier;
