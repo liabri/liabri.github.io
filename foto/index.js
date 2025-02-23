@@ -95,6 +95,11 @@ function horizontalScrolling(index) {
 
         progressBarPercentage=Math.round((offsetX/maxScrollLeft)*100);
         document.getElementById("progressBar").style.width = progressBarPercentage + "%";
+        if (progressBarPercentage>20) {
+            document.getElementById("progressBarTip").style.display = "none";
+        } else {
+            document.getElementById("progressBarTip").style.display = "inherit";
+        }
 
         // about 60 times a second
         rafId = requestAnimationFrame(draw);
