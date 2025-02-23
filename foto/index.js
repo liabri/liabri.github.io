@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
         // enable horizontal scrolling for first section
         horizontalScrolling(1);
         //  enable buttons to change section
-        document.getElementById("right").style.display = "flex";
+        try { document.getElementById("right").style.display = "flex"; }  catch {}
     }
 });
 
@@ -39,7 +39,6 @@ if (window.jQuery) {
 }
 
 function show(self, about) {
-    // self.classList.add("active");
     if (about) {
         document.getElementById("about").classList.add("active");
     } else {
@@ -53,9 +52,6 @@ function show(self, about) {
 }
 
 function hide() {
-    // document.querySelectorAll("nav").forEach((el) => {
-    //     el.classList.remove("active");
-    // });
     document.getElementById("about").classList.remove("active");
     document.getElementById("projects").classList.remove("active");
 
@@ -66,8 +62,13 @@ function hide() {
 }
 
 function horizontalScrolling(index) {
-    const sections = document.querySelectorAll(".section");
+    var sections = [];
+    sections = document.querySelectorAll(".section");
     scrollContainer = sections[index - 1];
+
+    if (typeof scrollContainer == 'undefined') {
+        scrollContainer = document.getElementById("firstroll");
+    }
 
     try {
         var offsetX = scrollContainer.scrollLeft;
