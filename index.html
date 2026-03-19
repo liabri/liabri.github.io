@@ -3,23 +3,23 @@
     <head>
         <meta charset="utf-8" />
 
-        <title>liam brincat's photographic atelier</title>
+        <title>liam brincat's darkroom</title>
         <meta name="description" content="I'm Liam Brincat, born and raised on the island of Malta. I likely picked up my first ever camera before the age of 3; however, it took me 18 years to really take a photo.">
-        <meta name="keywords" content="photographer, brincat">
+        <meta name="keywords" content="photographer, brincat, liambrincat">
         <meta name="author" content="Liam Brincat">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- facebook -->
-        <meta property="og:title" content="Liam Brincat's Photography">
+        <meta property="og:title" content="Liam Brincat's Darkroom">
         <meta property="og:description" content="I'm Liam Brincat, a photographer born and raised on the island of Malta. I likely picked up my first ever camera before the age of 3; however, it took me 18 years to really take a photo.">
         <meta property="og:image" content="https://liambrincat.mt/data/favicon/favicon.svg">
         <meta property="og:url" content="https://liambrincat.mt">
 
         <!-- twitter -->
-        <meta name="twitter:title" content="Liam Brincat's Photography">
+        <meta name="twitter:title" content="Liam Brincat's Darkroom">
         <meta name="twitter:description" content="I'm Liam Brincat, a photographer born and raised on the island of Malta. I likely picked up my first ever camera before the age of 3; however, it took me 18 years to really take a photo.">
         <meta name="twitter:url" content="https://liambrincat.mt/data/favicon/favicon.svg">
-        <meta name="twitter:card" content="Go through the photography of Liam Brincat">
+        <meta name="twitter:card" content="Explore Liam Brincat's Darkroom">
 
         <link rel="icon" type="image/png" href="data/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="data/favicon/favicon.svg" />
@@ -29,33 +29,14 @@
 
         <link rel="stylesheet" type="text/css" href="fullpage/fullpage.min.css" />
         <link rel="stylesheet" type="text/css" href="index.css" />
+
+        <!-- If a hash exists on initial load, instantly flag the HTML tag -->
+        <script> if (window.location.hash.length > 1) { document.documentElement.setAttribute('data-has-hash', 'true'); } </script>
     </head>
     <body>
         <div class="persistent-border"></div>
         <div id="projector-overlay"></div>
-
-        <section id="landing">
-            <div class="text-pane">
-                <h1>liam brincat</h1>
-                <p>a photographic notebook</p><!--, sometimes with more thought, sometimes less, but it’s all part of the same voice.</p> -->
-            </div>
-            <div class="cubist-figure">
-                <div class="shard shard-1"><img src="data/the-people-of-djerdap/1.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-2"><img src="data/echoes-of-the-road/17.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-3"><img src="data/tangledtapestry/7.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-4"><img src="data/echoes-of-the-road/7.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-5"><img src="data/tangledtapestry/1.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-6"><img src="data/the-people-of-djerdap/4.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-7"><img src="data/echoes-of-the-road/13.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-8"><img src="data/the-people-of-djerdap/8.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-9"><img src="data/tangledtapestry/3.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-10"><img src="data/echoes-of-the-road/15.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-11"><img src="data/the-people-of-djerdap/6.webp" alt="Collage Fragment"></div>
-                <div class="shard shard-12"><img src="data/tangledtapestry/4.webp" alt="Collage Fragment"></div>
-            </div>
-        </section>
-
-        <div id="content" style="display: none;">
+        <div id="content">
             <nav>
                 <ul>
                     <li class="section-nav" onclick="fullpage_api.moveSectionUp();" onmouseover="hide();">prev</li>
@@ -119,8 +100,12 @@
                 </div>
             </nav>
             <main>
+                <div id="landing">
+                    <h1>LIAM<br>BRINCAT</h1>
+                    <p>a photographic notebook</p><!--, sometimes with more thought, sometimes less, but it’s all part of the same voice.</p> -->
+                </div>
                 <div id="fullpage">
-                    <div class="section" data-anchor="tangledTapestry">
+                    <div class="section" data-anchor="tangledTapestry" data-color="255,254,237">
                         <div id="tangledTapestryCanvas" class="section-inner">
                             <div class="title-card">
                                 <div class="title-card-text">
@@ -215,7 +200,7 @@
                         </div>
                     </div>
 
-                    <div class="section" data-anchor="echoesOfTheRoad">
+                    <div class="section" data-anchor="echoesOfTheRoad" data-color="229,240,229">
                         <div id="echoesOfTheRoadCanvas" class="section-inner">
                             <h2 style="display:none;visibility:hidden">Echoes of the Road</h2>
                             <div class="cover">
@@ -310,7 +295,7 @@
                         </div>
                     </div>
 
-                    <div class="section" data-anchor="thePeopleOfDjerdap">
+                    <div class="section" data-anchor="thePeopleOfDjerdap" data-color="173,34,122">
                         <div id="thePeopleOfDjerdapCanvas" class="section-inner">
                             <div class="images">
                                 <figure class="image">

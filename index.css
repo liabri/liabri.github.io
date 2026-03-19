@@ -1,3 +1,18 @@
+:root {
+    --section-bg: var(--bg-primary);
+    --nav-bg: var(--section-bg);
+    --nav-text: var(--text-primary);
+
+    --mustard: #EAAA00;
+    --orange: #FF7A00;
+
+
+    --text-primary: rgb(0,0,0);
+    --text-secondary: rgb(255,254,237);
+    --bg-primary: rgb(255,254,237);
+    --bg-secondary: rgb(9,9,9);
+}
+
 *::-webkit-scrollbar {
     display: none; /* hide scroll bar for chrome, safri and opera */
 }
@@ -15,6 +30,11 @@
 @font-face {
     font-family: Beagley;
     src: url("fonts/Beagley/Beagley.otf");
+}
+
+@font-face {
+    font-family: GT-Sectra;
+    src: url("fonts/GT-Sectra-Black-Trial.woff2");
 }
 
 html, body {
@@ -102,69 +122,44 @@ body.is-changing-section #projector-overlay {
 /* =========================== LANDING PAGE ========================== */
 /* =================================================================== */
 
-/* --- 1. Main Canvas --- */
 #landing {
-    display: block; /* display: none; and enabled pre-enterSite javascript*/
-    position: absolute;
-
+    position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    bottom: 0;
     width: 100vw;
-    overflow: hidden;
+    height: 100vh;
+    background-color: blue;
 
-    /* transform-origin: left bottom;
-    transition: transform 1s cubic-bezier(0.6, 0.05, 0.15, 0.95);
-    transform: translateY(0%) skewY(0deg); */
-
-    transition: clip-path 1s cubic-bezier(0.6, 0.05, 0.15, 0.7);
-    clip-path: inset(0% 0% 0% 0%);
-
-    z-index: 1001;
-
-    /* temporary */
-    background-color: #fffeed;
-    background-image:
-      repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px),
-      repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px);
-    background-blend-mode: multiply;
+    opacity: 1;
+    z-index: 1; /* above fullpage.js */
+    visibility: visible;
+    pointer-events: auto;
 }
 
-/* --- 2. The Text Pane --- */
-.text-pane {
-    position: absolute;
-    z-index: 20;
-    bottom: 5vh;
-    left: 4vw;
+html[data-has-hash="true"] #landing {
+    display: none;
 }
-.text-pane h1 {
-    font-family: Beagley, serif;
-    font-size: 5em;
-    line-height: 1;
-    margin: 0;
-    color: #3D3A36;
 
-    background-color: #2a2723;
+html:not([data-has-hash]) nav ul {
+    background-color: rgb(173,34,122);
+}
 
-    background-image:
-      repeating-conic-gradient(rgba(255,255,255,0.06) 0% 25%, transparent 0% 50%),
-      repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 4px),
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 4px);
-    background-size: 8px 8px, 4px 4px, 4px 4px;
-    background-blend-mode: multiply;
+#landing h1 {
+    font-family: GT-Sectra, serif;
+    font-size: 13em;
+    line-height: 0.9;
+    letter-spacing: -15px;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin-left: 15vw;
+    text-align: left;
 
     text-shadow:
-      0.3px 0.3px 0.8px rgba(0, 0, 0, 0.25),
-      -0.3px -0.3px 0.8px rgba(0, 0, 0, 0.22),
-      0 0 1.2px rgba(0, 0, 0, 0.28);
+        -20px -45px  rgb(173,34,122);
 }
 
-.text-pane p {
+#landing p {
     font-family: FFGoodPro-News, sans-serif; font-size: 1.1em;
     margin: 0.5em 0 0 0.2em;
     color: #555;
@@ -179,87 +174,6 @@ body.is-changing-section #projector-overlay {
       0 0 0.8px rgba(0, 0, 0, 0.25),
       0.3px 0.3px 0.6px rgba(0, 0, 0, 0.2),
       -0.3px -0.3px 0.6px rgba(0, 0, 0, 0.2);
-}
-
-/* --- 3. The Cubist Figure Container --- */
-.cubist-figure {
-    position: absolute;
-    width: 30vw;
-    height: 85vh;
-    right: 8vw;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* --- 4. General Shard Styles --- */
-.shard {
-    position: absolute;
-    overflow: hidden;
-    transition: transform 0.4s ease, z-index 0s 0.2s;
-    background-color: #000; /* Black background for clean lines */
-}
-.shard img {
-    width: 100%; height: 100%; object-fit: cover;
-    filter: sepia(70%) grayscale(20%); transition: filter 0.4s ease, opacity 0.4s ease;
-    opacity: 0.9;
-}
-.shard:hover {
-    z-index: 15;
-    transform: scale(1.03);
-    transition: transform 0.4s ease, z-index 0s;
-}
-.shard:hover img {
-    filter: sepia(0%) grayscale(0%);
-    opacity: 1;
-}
-
-.shard-1 {
-    width: 40%; height: 30%; top: 0%; left: 30%; z-index: 5;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-.shard-2 {
-    width: 32%; height: 50%; top: 10%; left: 0%; z-index: 3;
-    clip-path: polygon(100% 28%, 100% 72%, 0 100%, 0 0);
-}
-.shard-3 {
-    width: 32%; height: 50%; top: 10%; left: 68%; z-index: 3;
-    clip-path: polygon(100% 0, 100% 100%, 0 72%, 0 28%);
-}
-.shard-4 {
-    width: 40%; height: 35%; top: 28%; left: 30%; z-index: 6;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-.shard-5 {
-    width: 20%; height: 25%; top: 25%; left: 20%; z-index: 7;
-    clip-path: polygon(0 0, 100% 100%, 0 100%);
-}
-.shard-6 {
-    width: 20%; height: 25%; top: 25%; left: 60%; z-index: 7;
-    clip-path: polygon(100% 0, 100% 100%, 0 100%);
-}
-.shard-7 {
-    width: 35%; height: 40%; top: 60%; left: 15%; z-index: 4;
-    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
-}
-.shard-8 {
-    width: 35%; height: 40%; top: 60%; left: 50%; z-index: 4;
-    clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 100%);
-}
-.shard-9 {
-    width: 30%; height: 20%; top: 55%; left: 35%; z-index: 8;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-.shard-10 {
-    width: 25%; height: 15%; top: 0%; left: 5%; z-index: 2;
-    opacity: 0.8;
-}
-.shard-11 {
-    width: 25%; height: 15%; top: 0%; left: 70%; z-index: 2;
-    opacity: 0.8;
-}
-.shard-12 {
-    width: 20%; height: 15%; top: 85%; left: 40%; z-index: 2;
-    opacity: 0.8;
 }
 
 /* =================================================================== */
@@ -286,7 +200,6 @@ nav ul {
     writing-mode: vertical-lr;
     transform: scale(-1, -1);
     font-family: Beagley, serif;
-    color: #000;
 
     padding: 0 1vw 0 0;
     margin: 0;
@@ -300,12 +213,15 @@ nav ul {
 
     border-width: 0 0 0 2px;
     border-style: solid;
-    border-color: #000;
 
     background-image:
       repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px),
       repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px);
     background-blend-mode: multiply;
+
+    background-color: var(--nav-bg);
+    border-color: var(--nav-text);
+    color: var(--nav-text);
 }
 
 nav ul li {
@@ -321,12 +237,10 @@ nav ul li {
 }
 
 nav ul li:hover {
-    /* background: transparent; */
-    /* color: #34856c; colour should also be chosen from CURRENT content */
-    background-color: #EAAA00;
+    background-color: var(--mustard);
     transform: translate(5px, 5px);
     text-shadow:
-        -5px -5px #FF7A00;
+        -5px -5px var(--orange);
 }
 
 /* next/prev buttons */
@@ -370,13 +284,12 @@ nav ul li:hover > div span, #left li > div span {
     pointer-events: auto;
 
     border-width: 0 0 0 0;
-    border-style: solid;
-    border-color: #000;
 
     background-image:
       repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px),
       repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px);
     background-blend-mode: multiply;
+    background-color: transparent;
 }
 
 .close img {
@@ -392,7 +305,7 @@ nav ul li:hover > div span, #left li > div span {
     transform: translate(-100vw, 0);
     transition: transform 0.2s;
 
-    background: #090909;
+    background: var(--bg-secondary);
 
     width: 91vw;
     padding-left: 9vw;
@@ -565,8 +478,16 @@ nav ul li:hover > div span, #left li > div span {
     gap: 1vw;
 }
 
+/*#menu, nav ul {
+pointer-events: all;
+}
+
+#menu:hover, nav ul:hover {
+    background-color: transparent;
+}*/
+
 /* =================================================================== */
-/* =========================== PROJECT VIEW ========================== */
+/* =========================== CONTENT VIEW ========================== */
 /* =================================================================== */
 
 main {
@@ -590,6 +511,7 @@ main {
       repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px),
       repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 1px, transparent 1px, transparent 4px);
     background-blend-mode: multiply;
+    background-color: var(--nav-bg);
 }
 
 /* === TITLE CARD === */
@@ -1045,19 +967,8 @@ figcaption {
 /* ==================== INDIVIDUAL PROJECT STYLES ==================== */
 /* =================================================================== */
 
-#tangledTapestryCanvas {
-    background-color: rgba(255, 254, 237, 0.9);
-}
 
 #tangledTapestryCanvas .title-card div h2 {
     color: #000;
     text-shadow: 5px 5px #d84949;
-}
-
-#echoesOfTheRoadCanvas {
-    background-color: rgba(229, 240, 229, 0.9);
-}
-
-#thePeopleOfDjerdapCanvas {
-    background-color: rgba(173, 34, 122, 0.9);
 }
